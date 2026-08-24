@@ -40,11 +40,24 @@
      them. product and emirate derive from her own selections, never typed. */
   set('channel', q.get('channel')||'');
   set('branch', q.get('branch')||'');
+  /* offering: uses Emma's exact GHL tag vocabulary so the page feeds her pipeline
+     without a translation step. product stays look-vs-door, which is what Layer 4
+     measures the conversion on. */
+  var OFFERING={toner:'toner-reset',treatment:'treatment-blowdry',bundle:'blowdry',
+    root:'colour-package',colour:'colour-package',smoothing:'smooth-edit',
+    scalp:'treatment-blowdry'};
+  /* Derived fields must CLEAR as well as fill. set() above deliberately ignores an
+     empty value, which is right for a UTM that arrives once and must not be wiped by
+     a later empty read. It is wrong here: if she picks The Smooth Edit and then
+     changes to 'not sure', a sticky set() would send offering:smooth-edit to GHL for
+     a woman who told us she does not know. So these three assign unconditionally. */
+  var reset=function(n,v){ var el=f.querySelector('[name="'+n+'"]'); if(el) el.value=v; };
   var deriveTags=function(){
     var sv=(document.getElementById('svc')||{}).value||'';
     var sa=(document.getElementById('salon')||{}).value||'';
-    set('product', sv ? ((sv==='colour'||sv==='strength'||sv==='smoothing')?'door':'look') : '');
-    set('emirate', sa ? ((sa==='al-quoz'||sa==='motor-city'||sa==='either-dubai')?'dubai':'abudhabi') : '');
+    reset('product', sv ? (sv==='look'?'look':(sv==='unsure'?'':'door')) : '');
+    reset('offering', OFFERING[sv]||'');
+    reset('emirate', sa ? ((sa==='al-quoz'||sa==='motor-city'||sa==='either-dubai')?'dubai':'abudhabi') : '');
   };
   f.addEventListener('change',deriveTags); deriveTags();
 

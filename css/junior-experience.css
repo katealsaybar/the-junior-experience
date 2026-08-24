@@ -190,3 +190,7 @@
   .hour-rail{ grid-template-columns:1fr; gap:20px; }
   .hour-rail img{ aspect-ratio:16/10; }
 }
+
+.menu-head{ font-family:var(--fd); font-size:clamp(21px,2.6vw,26px); font-weight:500; text-align:center; margin:38px 0 6px; color:var(--ink); }
+.menu-lede{ max-width:56ch; margin:0 auto 20px; text-align:center; font-size:15px; line-height:1.6; color:var(--ink-soft); }
+.menu-note{ max-width:62ch; margin:30px auto 0; text-align:center; font-size:14.5px; line-height:1.65; color:var(--ink-soft); }
