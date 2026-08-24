@@ -36,7 +36,7 @@
   var svc=q.get('svc'); if(svc){ var s=document.getElementById('svc'); if(s) s.value=svc; }
 
   /* Layer 4 tags. channel and branch arrive on the URL, because the GBP booking links
-     carry ?channel=gbp&branch=<slug> and the three profiles cannot be told apart without
+     carry ?channel=gbp&branch=<slug> and the four profiles cannot be told apart without
      them. product and emirate derive from her own selections, never typed. */
   set('channel', q.get('channel')||'');
   set('branch', q.get('branch')||'');
@@ -44,7 +44,7 @@
     var sv=(document.getElementById('svc')||{}).value||'';
     var sa=(document.getElementById('salon')||{}).value||'';
     set('product', sv ? ((sv==='colour'||sv==='strength'||sv==='smoothing')?'door':'look') : '');
-    set('emirate', sa ? (sa==='al-quoz'?'dubai':'abudhabi') : '');
+    set('emirate', sa ? ((sa==='al-quoz'||sa==='motor-city'||sa==='either-dubai')?'dubai':'abudhabi') : '');
   };
   f.addEventListener('change',deriveTags); deriveTags();
 

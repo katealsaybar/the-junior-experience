@@ -1,6 +1,43 @@
 # A Proper Look, build notes
 
-## Revision pass, 24 Aug 2026 (Kate)
+## Second revision, 24 Aug 2026, afternoon: Motor City is in
+
+Emma supplied the full staff list. Every count in the framework was built on four
+stylists at three branches. It is **ten people at four branches, in two grades**:
+
+- **Junior stylists (6):** May and Irlyn at Khalifa City, Eds Asuncion at Saadiyat,
+  Areanne at Al Quoz, Clarissa Destacamento and Xyrhy Unisa at Motor City.
+- **Blowdry specialists (4):** Helen Lita and Myra Sarmiento at Saadiyat, Hazel Mae and
+  Mevil at Khalifa City. Areanne, Clarissa and Xyrhy are dual-graded.
+
+Eds and Edz are the same person. One spelling: Eds.
+
+Applied to the page:
+
+- **Motor City added** to the salon select, the footer, and as a fourth `LocalBusiness`
+  node with its own `areaServed`. The Layer 5 spec built this as a one-boolean change and
+  that is exactly what it cost.
+- **The Motor City holding sentence and the waiting-list checkbox are gone.** They existed
+  because the branch could not deliver. It can.
+- **"Either Dubai salon is fine" comes back.** Layer 5 C3 retired it when there was one
+  Dubai salon. There are two again.
+- **Hero support line** is now "All four salons, Abu Dhabi and Dubai" rather than three
+  named branches. This also settles Layer 5 item 51: the "four salons" trust claim used to
+  sit beside a three-salon selector and read as an error. They agree now.
+- **`emirate` derivation** covers al-quoz, motor-city and either-dubai as Dubai.
+- The FAQ answer on which salons run it, in the page and in the FAQPage schema.
+
+**Not applied, because it is not the page's call:** Motor City's two are blowdry, keratin
+and root colour rather than full colour, so which branches can sell the colour booking
+still depends on the sign-off table. The page does not promise every door at every branch,
+so nothing here overstates it.
+
+---
+
+## Revision pass, 24 Aug 2026, morning (Kate)
+
+*Three items below are superseded by the Motor City section above: the hero support line,
+Motor City being out of the select, and the schema carrying three branches rather than four.*
 
 Rebuilt against **A Proper Look, Campaign Framework** (canonical copy in Kate's workspace,
 `88975ef7d53d82deacd4816fb414aaed`), specifically the **Layer 5 resolutions (all seventeen)**,

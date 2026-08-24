@@ -39,6 +39,7 @@
 {"@type":"HairSalon","@id":"https://www.tararosesalon.com/#salon-khalifa-city","name":"Tara Rose Salon, Khalifa City A","url":"https://www.tararosesalon.com","parentOrganization":{"@id":"https://www.tararosesalon.com/#organization"},"address":{"@type":"PostalAddress","streetAddress":"Khalifa City A","addressLocality":"Abu Dhabi","addressCountry":"AE"},"areaServed":{"@type":"City","name":"Abu Dhabi"},"openingHours":"Mo-Su 09:00-20:00","makesOffer":{"@type":"Offer","name":"A Proper Look","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"AED","price":"300"}}},
 {"@type":"HairSalon","@id":"https://www.tararosesalon.com/#salon-saadiyat","name":"Tara Rose Salon, Mamsha Al Saadiyat","url":"https://www.tararosesalon.com","parentOrganization":{"@id":"https://www.tararosesalon.com/#organization"},"address":{"@type":"PostalAddress","streetAddress":"Mamsha Al Saadiyat, Saadiyat Island","addressLocality":"Abu Dhabi","addressCountry":"AE"},"areaServed":{"@type":"City","name":"Abu Dhabi"},"openingHours":"Mo-Su 09:00-20:00","makesOffer":{"@type":"Offer","name":"A Proper Look","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"AED","price":"300"}}},
 {"@type":"HairSalon","@id":"https://www.tararosesalon.com/#salon-al-quoz","name":"Tara Rose Salon, Al Quoz","url":"https://www.tararosesalon.com","parentOrganization":{"@id":"https://www.tararosesalon.com/#organization"},"address":{"@type":"PostalAddress","streetAddress":"Arenco Warehouse 10, Al Quoz 1","addressLocality":"Dubai","addressCountry":"AE"},"areaServed":{"@type":"City","name":"Dubai"},"openingHours":"Mo-Su 09:00-20:00","makesOffer":{"@type":"Offer","name":"A Proper Look","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"AED","price":"300"}}},
+{"@type":"HairSalon","@id":"https://www.tararosesalon.com/#salon-motor-city","name":"Tara Rose Salon, Motor City","url":"https://www.tararosesalon.com","parentOrganization":{"@id":"https://www.tararosesalon.com/#organization"},"address":{"@type":"PostalAddress","streetAddress":"Daytona House, Unit LB 03, Motor City","addressLocality":"Dubai","addressCountry":"AE"},"areaServed":{"@type":"City","name":"Dubai"},"openingHours":"Mo-Su 09:00-20:00","makesOffer":{"@type":"Offer","name":"A Proper Look","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"AED","price":"300"}}},
 {"@type":"Service","name":"A Proper Look","serviceType":"Hair diagnosis and treatment","provider":{"@id":"https://www.tararosesalon.com/#organization"},"areaServed":[{"@type":"City","name":"Abu Dhabi"},{"@type":"City","name":"Dubai"}],"offers":[
 {"@type":"Offer","name":"A Proper Look","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"AED","price":"300"}},
 {"@type":"Offer","name":"Colour that is not holding","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"AED","minPrice":"570"}},
@@ -51,7 +52,7 @@
 {"@type":"Question","name":"Is a junior stylist less experienced?","acceptedAnswer":{"@type":"Answer","text":"Less booked, not less careful. Our senior team’s columns are the most requested in the salon and they’re priced that way: hers isn’t there yet. She’s signed off by a named senior on everything she’s offering you, before anything is mixed. And this isn’t about years: several of the team have been doing hair for well over a decade. What a full column genuinely cannot give you is the twenty minutes at the start, and that’s the thing you’d be booking."}},
 {"@type":"Question","name":"What if I want the senior team instead?","acceptedAnswer":{"@type":"Answer","text":"Then book them. Our senior columns are the most requested in the salon, and they are priced that way. And if the senior team is the right call for your hair, we will tell you so in the chair."}},
 {"@type":"Question","name":"What if it does not feel right afterwards?","acceptedAnswer":{"@type":"Answer","text":"You are covered by the Confidence Promise, in full, further up this page."}},
-{"@type":"Question","name":"Which salons run A Proper Look?","acceptedAnswer":{"@type":"Answer","text":"Khalifa City A and Mamsha Al Saadiyat in Abu Dhabi, and Al Quoz 1 in Dubai. A salon appears here only if it can actually deliver the hour. A Proper Look isn’t running at Motor City yet: there’s no stylist there doing it. If Motor City is your salon, Al Quoz is the nearest, and we’ll tell you the moment it opens up closer to home."}}]}]}
+{"@type":"Question","name":"Which salons run A Proper Look?","acceptedAnswer":{"@type":"Answer","text":"All four: Khalifa City A and Mamsha Al Saadiyat in Abu Dhabi, and Al Quoz 1 and Motor City in Dubai. A salon appears here only if it can actually deliver the hour."}}]}]}
 </script>
 </head>
 <body>
@@ -78,7 +79,7 @@
       <p class="lede">An hour with your stylist that is only about your hair: what it is doing, what the water here has done to it, and what to do next. You leave with it written down.</p>
       <ul class="support">
         <li>A Proper Look &middot; AED 300</li>
-        <li>Khalifa City &middot; Saadiyat &middot; Al Quoz</li>
+        <li>All four salons, Abu Dhabi and Dubai</li>
       </ul>
       <div class="cta-row">
         <a class="pill pill--accent" href="#book">Book A Proper Look <span class="arr">&rarr;</span></a>
@@ -331,13 +332,11 @@
             <option value="khalifa-city">Khalifa City A, Abu Dhabi</option>
             <option value="saadiyat">Mamsha Al Saadiyat, Abu Dhabi</option>
             <option value="al-quoz">Al Quoz 1, Dubai</option>
+            <option value="motor-city">Motor City, Dubai</option>
             <option value="either-abudhabi">Either Abu Dhabi salon is fine</option>
+            <option value="either-dubai">Either Dubai salon is fine</option>
           </select>
-          <p class="help">A salon appears here only if it can actually deliver the hour. A Proper Look isn&rsquo;t running at Motor City yet: there&rsquo;s no stylist there doing it. If Motor City is your salon, Al Quoz is the nearest, and we&rsquo;ll tell you the moment it opens up closer to home.</p>
-          <div class="pdpl__group" style="margin-top:10px">
-            <input type="checkbox" class="pdpl__checkbox" id="mc-wait" name="motor_city_wait">
-            <label class="pdpl__label" for="mc-wait">Motor City is my salon. Tell me the moment A Proper Look opens there. <span>(optional)</span></label>
-          </div>
+          <p class="help">A salon appears here only if it can actually deliver the hour.</p>
         </div>
         <div class="field">
           <label for="heard">How did you hear about us? <span class="req">*</span></label>
@@ -401,7 +400,7 @@
     <details><summary>Is a junior stylist less experienced?<span class="chev"></span></summary><div class="ans">Less booked, not less careful. Our senior team&rsquo;s columns are the most requested in the salon and they&rsquo;re priced that way: hers isn&rsquo;t there yet. She&rsquo;s signed off by a named senior on everything she&rsquo;s offering you, before anything is mixed. And this isn&rsquo;t about years: several of the team have been doing hair for well over a decade. What a full column genuinely cannot give you is the twenty minutes at the start, and that&rsquo;s the thing you&rsquo;d be booking.</div></details>
     <details><summary>What if I want the senior team instead?<span class="chev"></span></summary><div class="ans">Then book them. Our senior columns are the most requested in the salon, and they are priced that way. And if the senior team is the right call for your hair, we will tell you so in the chair.</div></details>
     <details><summary>What if it does not feel right afterwards?<span class="chev"></span></summary><div class="ans">You are covered by the Confidence Promise, in full, further up this page.</div></details>
-    <details><summary>Which salons run A Proper Look?<span class="chev"></span></summary><div class="ans">Khalifa City A and Mamsha Al Saadiyat in Abu Dhabi, and Al Quoz 1 in Dubai. A salon appears here only if it can actually deliver the hour. A Proper Look isn&rsquo;t running at Motor City yet: there&rsquo;s no stylist there doing it. If Motor City is your salon, Al Quoz is the nearest, and we&rsquo;ll tell you the moment it opens up closer to home.</div></details>
+    <details><summary>Which salons run A Proper Look?<span class="chev"></span></summary><div class="ans">All four: Khalifa City A and Mamsha Al Saadiyat in Abu Dhabi, and Al Quoz 1 and Motor City in Dubai. A salon appears here only if it can actually deliver the hour.</div></details>
   </div>
 </section>
 
@@ -426,6 +425,7 @@
         <p>Khalifa City A, Abu Dhabi</p>
         <p>Mamsha Al Saadiyat, Abu Dhabi</p>
         <p>Al Quoz 1, Dubai</p>
+        <p>Motor City, Dubai</p>
         <p><a href="https://www.tararosesalon.com/en/ae/contact">All four salons</a></p>
       </div>
       <div>
