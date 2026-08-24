@@ -1,0 +1,192 @@
+/* a-proper-look.css. A Proper Look (formerly The Unhurried Hour).
+   Built to Layer 5, The Landing Page Handover. Only the blocks the voucher page
+   did not already have: the Hero-B split, the three entry cards, the availability
+   band, the select/textarea form fields, and the mobile sticky bar. Everything
+   else reuses page-beauty-voucher.css and trs-core.css so a token change there
+   still reaches this page. */
+
+/* ------------------------------------------------------------------- HERO-B
+   Split image and text, not the voucher's full-bleed overlay. Layer 5 E: the
+   fluid clamp scales on the short axis too, because a width-only clamp pushes
+   the CTA below the fold on a 1280x800 laptop. */
+.hero-b{ background:var(--paper); padding:0; overflow:hidden; }
+.hero-b .split{
+  display:grid; grid-template-columns:1fr 1fr; align-items:stretch;
+  min-height:min(78vh,720px);
+}
+.hero-b .htext{
+  display:flex; flex-direction:column; justify-content:center;
+  padding:clamp(28px,5vw,64px) clamp(20px,4vw,56px);
+  max-width:none;
+}
+.hero-b .eyebrow{ display:block; margin-bottom:16px; }
+.hero-b .h-1{
+  font-family:var(--fd); font-weight:400; color:var(--ink);
+  font-size:clamp(30px, min(4.6vw, 5.6vh), 52px);
+  line-height:1.06; letter-spacing:-.015em; margin:0; text-wrap:balance;
+}
+.hero-b .lede{
+  margin:18px 0 0; max-width:46ch;
+  font-family:var(--fb); font-size:clamp(15px,1.15vw,17px); font-weight:300;
+  line-height:1.62; color:var(--ink-soft);
+}
+.hero-b .support{
+  display:flex; flex-wrap:wrap; gap:8px 18px; margin:22px 0 0; padding:0; list-style:none;
+}
+.hero-b .support li{
+  font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.hero-b .cta-row{ margin-top:28px; }
+.hero-b .himg{
+  background:var(--stone-soft) center/cover no-repeat;
+  min-height:340px;
+}
+@media(max-width:833px){
+  .hero-b .split{ grid-template-columns:1fr; min-height:0; }
+  /* The image stays above the text below the split, but it is a band, not a panel.
+     Height is capped against the VIEWPORT, not derived from the width: an
+     aspect-ratio plus max-height shrinks the width instead of the height and
+     leaves dead space beside the image. Capping height against vh is also what
+     keeps the pill above the fold on a short screen, which is the real
+     requirement in Layer 5 E. */
+  .hero-b .himg{
+    order:-1; width:100%; min-height:0;
+    height:clamp(140px, 24vh, 240px); aspect-ratio:auto;
+  }
+  .hero-b .htext{ padding-top:22px; }
+  .hero-b .lede{ font-size:15px; }
+  /* On a phone the support chips sit under the pill, not above it. That is 56px
+     of vertical budget, and it is the difference between the CTA landing at 702
+     and at 646 on a 375x667 screen. */
+  .hero-b .htext{ display:flex; flex-direction:column; }
+  .hero-b .cta-row{ order:1; margin-top:20px; }
+  .hero-b .support{ order:2; margin-top:18px; gap:6px 14px; }
+}
+
+/* ------------------------------------------------- THE THREE ENTRY POINTS (#start)
+   Layer 5 D: near-rectangular cards, one filled pill each, and min-width:0 on the
+   children so long lines cannot blow the grid out. */
+.doors{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px; margin-top:36px;
+}
+.doors > *{ min-width:0; }
+.door{
+  display:flex; flex-direction:column;
+  background:var(--paper); border:1px solid var(--hair); border-radius:var(--r-md);
+  padding:26px 26px 24px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 14px 34px -24px rgba(45,46,55,.32);
+}
+.door h3{
+  font-family:var(--fd); font-style:italic; font-weight:500;
+  font-size:clamp(19px,1.7vw,23px); line-height:1.26; color:var(--ink); margin:0;
+}
+.door p{
+  margin:14px 0 0; font-family:var(--fb); font-size:14.5px; font-weight:300;
+  line-height:1.62; color:var(--ink-soft);
+}
+.door .from{
+  display:block; margin:20px 0 0;
+  font-size:11px; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.door .from b{
+  display:block; margin-top:6px; font-family:var(--fd); font-weight:500;
+  font-size:26px; letter-spacing:0; text-transform:none; color:var(--ink);
+  font-variant-numeric:tabular-nums;
+}
+.door .pill{ margin-top:22px; align-self:flex-start; }
+.doors-unsure{
+  margin:30px auto 0; max-width:62ch; text-align:center;
+  font-family:var(--fb); font-size:15.5px; line-height:1.62; color:var(--ink);
+}
+.doors-unsure em{ font-family:var(--fd); font-style:italic; }
+.doors-unsure a{ color:#3aa892; }
+.doors-menu{
+  margin:22px 0 0; text-align:center;
+  font-size:13px; letter-spacing:.02em; color:var(--ink-soft);
+}
+.doors-menu a{ color:#3aa892; text-decoration:underline; }
+
+/* -------------------------------------------------------------- AVAILABILITY
+   The only urgency on the page, and it carries no number until Ops supplies a
+   real one. No countdown, no fabricated close date. */
+.avail{
+  max-width:64ch; margin:0 auto; text-align:center;
+  font-family:var(--fb); font-size:16px; font-weight:300; line-height:1.68; color:var(--ink-soft);
+}
+.avail b{ color:var(--ink); font-weight:500; }
+
+/* -------------------------------------------------------- FORM, extra controls
+   page-beauty-voucher.css styles .field input only. The A Proper Look form also
+   uses selects and a textarea. The 16px floor is inherited from trs-core.css. */
+.field select,
+.field textarea{
+  width:100%; font-family:var(--fb); font-size:15px; color:var(--ink);
+  background:var(--paper); border:1px solid var(--hair); border-radius:var(--r-sm);
+  padding:14px 16px; transition:border-color var(--dur) var(--ease);
+}
+.field textarea{ resize:vertical; min-height:96px; line-height:1.6; }
+.field select:focus,
+.field textarea:focus{ outline:2px solid var(--accent-deep); outline-offset:3px; border-color:var(--accent-deep); }
+.field .help{
+  margin:8px 0 0; font-family:var(--fb); font-size:12.5px; font-weight:300;
+  letter-spacing:0; text-transform:none; color:var(--ink-soft);
+}
+.field--hidden{ display:none; }
+
+/* ------------------------------------------------------------- STICKY CTA BAR
+   Layer 5 E: full-width bar under 768 only, above 768 the nav pill does the work.
+   Shown once the hero has left, hidden again over #book and the footer. */
+.sticky-bar{
+  position:fixed; left:0; right:0; bottom:0; z-index:60;
+  display:none; align-items:center; justify-content:center; gap:16px;
+  padding:9px 16px calc(9px + env(safe-area-inset-bottom));
+  min-height:56px; background:rgba(250,248,244,.96); backdrop-filter:blur(8px);
+  border-top:1px solid var(--hair);
+  opacity:0; transition:opacity .22s ease; pointer-events:none;
+}
+.sticky-bar.show{ opacity:1; pointer-events:auto; }
+.sticky-bar .pill{ padding:13px 22px; font-size:13px; }
+.sticky-bar a.wa{ font-size:13px; color:#3aa892; text-decoration:none; white-space:nowrap; }
+@media(max-width:767px){ .sticky-bar{ display:flex; } }
+@media(prefers-reduced-motion:reduce){ .sticky-bar{ transition:none; } }
+
+/* Tap-target floor. Layer 5 E: 44x44 minimum on anything tappable, and a button's
+   height is the source of truth, never its vertical padding. */
+.door .pill, .sticky-bar .pill, .doors-unsure a, .doors-menu a{ min-height:44px; }
+.doors-unsure a, .doors-menu a{ display:inline-block; padding:11px 0; }
+
+/* Checkbox hit area extends to the full label, Layer 5 E. The box itself is 20px
+   by design, so the label carries the 44px target. */
+.pdpl__group{ align-items:center; }
+.pdpl__label{ padding:11px 0; }
+
+/* The wordmark is set in Inter, not Playfair. Kate, 21 Aug 2026.
+   Weight drops to 400 with the switch: Inter 500 at this tracking reads heavier
+   than the Playfair 500 it replaces, and the wordmark should not out-weigh the H1. */
+.trs-nav .brand__wm{ font-family:var(--fb); font-weight:400; }
+.foot .brand__wm{ font-family:var(--fb); font-weight:400; }
+
+/* ------------------------------------------------------------- THE HOUR, photo rail
+   Three portraits under the five steps. The only landscape assets in the library are
+   the building and a meeting shot, so the rail is portrait at three-up and switches to
+   a single landscape crop on a phone rather than stacking three tall images. */
+.hour-rail{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:34px 0 6px;
+}
+.hour-rail figure{ margin:0; }
+.hour-rail img{
+  width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; display:block;
+  border-radius:var(--r-md); background:var(--stone-soft);
+}
+.hour-rail figcaption{
+  margin-top:11px; text-align:center;
+  font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-soft);
+}
+@media(max-width:559px){
+  .hour-rail{ grid-template-columns:1fr; gap:20px; }
+  .hour-rail img{ aspect-ratio:16/10; }
+}
