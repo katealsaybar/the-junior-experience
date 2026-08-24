@@ -1,5 +1,46 @@
 # The Junior Experience, build notes
 
+## Fourth revision, 24 Aug 2026: the price menu is combined
+
+Kate's call: combine the two menus. It fixes more than it merges. The framework's three
+doors were abstractions, and one of them was **not a real product**: "Door 2 at AED 400"
+appears in no price list anywhere. The named menu does.
+
+**Seven priced items, two groups.** Between visits: The Tone Reset from 130, Treatment and
+Blow-dry from 150, The Blow-dry Bundle of three from 240. The bigger visits: The Root
+Revival from 380, The Colour Immersion from 570, The Smooth Edit from 620. The consultation
+hour at AED 300 stays as the featured card above both. Schema offers rebuilt to match.
+
+**AED 130 is not an introductory price, and this was worth checking before writing it.**
+The July price tables run 130 / 180 / 230 / 330 by length, so it is the Short/Fine price and
+"from" is accurate. Had it been introductory it would have contradicted the locked Belief 5
+sentence already on this page, *"Not an introductory rate: it's what an appointment with her
+costs, for as long as you book her"*, which is the line that kills the "will it go up?"
+objection the framework calls the quiet killer of the in-chair rebook.
+
+**Added the band note**, that every price is a starting price which rises with length and
+thickness, and that the stylist says which band before booking rather than at the till. That
+closes a gap: a From price the front desk has to walk up is the same fault the framework
+killed elsewhere.
+
+**New hidden field `offering`**, using Emma's exact GHL tag vocabulary (`toner-reset`,
+`treatment-blowdry`, `blowdry`, `colour-package`, `smooth-edit`), so the page feeds her
+pipeline with no translation step. `product` stays look-versus-door, which is what Layer 4
+measures the conversion on.
+
+**One bug the browser test caught.** `set()` deliberately ignores an empty value, which is
+correct for a UTM that arrives once and must not be wiped by a later empty read, and wrong
+for a derived field. Picking The Smooth Edit and then changing to "not sure" was sending
+`offering:smooth-edit` to GHL for a woman who had just said she did not know. The three
+derived fields now assign unconditionally.
+
+Verified at 375 and desktop: no horizontal scroll, nothing overflowing in the menu, tap
+targets 52px, FAQ schema still mirrors the page byte for byte, no console errors.
+
+**The repo is now `katealsaybar/the-junior-experience`.**
+
+---
+
 ## Third revision, 24 Aug 2026: the name is The Junior Experience
 
 **Emma-Louise's call as GM, and it overrides the framework's rename.** The framework retired
