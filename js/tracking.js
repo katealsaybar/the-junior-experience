@@ -27,7 +27,7 @@
 
   /* Session ref, so a WhatsApp thread can be matched back to a session. */
   var ref=load('trs_ref');
-  if(!ref){ ref='APL-'+Math.random().toString(36).slice(2,6).toUpperCase(); store('trs_ref',ref); }
+  if(!ref){ ref='JE-'+Math.random().toString(36).slice(2,6).toUpperCase(); store('trs_ref',ref); }
   set('ref',ref);
   document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
     a.href = a.href + encodeURIComponent(' (ref '+ref+')');

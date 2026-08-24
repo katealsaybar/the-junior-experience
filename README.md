@@ -1,4 +1,4 @@
-# A Proper Look, landing page
+# The Junior Experience, landing page
 
 > **DRAFT. Not final, and not approved.** Nothing here has been through the formal
 > `/brand-review` gate, the founder has not signed off the copy, and the campaign it belongs
@@ -6,12 +6,12 @@
 > Do not send this to a client, an agency or a stylist as finished work.
 
 The junior stylist campaign landing page, built to **Layer 5, The Landing Page Handover**
-in the Notion framework *A Proper Look, Campaign Framework*. Canonical copy of the framework
+in the Notion framework, and renamed to **The Junior Experience** on 24 Aug on Emma-Louise's decision as GM. Canonical copy of the framework
 now lives in Kate's workspace, teamspace **Junior Stylist Framework**:
 <https://app.notion.com/p/88975ef7d53d82deacd4816fb414aaed>
 
 **Revised 24 Aug 2026** against the Layer 5 resolutions (all seventeen), Product architecture
-and Belief 5 pages. The campaign was renamed from *The Unhurried Hour*; see
+and Belief 5 pages. The campaign was The Unhurried Hour, then A Proper Look, and is now The Junior Experience; see
 `docs/BUILD-NOTES.md` for the full list of what changed.
 
 This is the standalone, source-separated copy: one HTML file, four stylesheets, five small
@@ -44,7 +44,7 @@ a-proper-look-page/
 │   ├── trs-core.css            the TRS design system. Shared, do not edit here
 │   ├── trs-blocks.css          shared campaign blocks (hero, press strip, grids,
 │   │                           dark bands, FAQ, form, footer, timeline)
-│   └── a-proper-look.css       this page only: Hero-B split, the entry cards,
+│   └── junior-experience.css       this page only: Hero-B split, the entry cards,
 │                               availability band, form selects, sticky bar
 ├── js/
 │   ├── nav-scroll.js           nav shadow once the page moves
@@ -60,7 +60,7 @@ a-proper-look-page/
 ```
 
 Load order matters and is fixed in `index.html`: `trs-core.css` carries the tokens, then
-`trs-blocks.css`, then `a-proper-look.css` last so page rules win. Scripts are `defer`
+`trs-blocks.css`, then `junior-experience.css` last so page rules win. Scripts are `defer`
 and run in listed order; `form-prefill.js` must come before `tracking.js`, because
 tracking reads the same `#svc` control.
 
@@ -72,7 +72,7 @@ tracking reads the same `#svc` control.
 carries locked sentences that must not be paraphrased: the Confidence Promise band, and
 "That was never yours to work out alone." in the `#column` section.
 
-**Prices.** Four in the `#start` section and nowhere else: A Proper Look at AED 300, then
+**Prices.** Four in the `#start` section and nowhere else: the consultation hour at AED 300, then
 the three doors at From 570 / 400 / 765. No percentage, no "save", no strike-through, no
 countdown. Anything above `#start` that carries a number is a defect. The one exception is
 the hero support line, which carries AED 300 because Layer 5 B option 1 specifies it.
@@ -92,13 +92,13 @@ the cohort. The locked replacement wording is on the Belief 5 page.
 ## Where this also lives
 
 The same page is built into the live page tree at
-`tara-rose-pages-main/a-proper-look/index.html`, where `build.py` inlines the CSS into the
+`tara-rose-pages-main/junior-experience/index.html`, where `build.py` inlines the CSS into the
 file. **Both copies were revised on 24 Aug and are in sync.** This folder is the readable
 source: change it here, then port the markup across and run `python build.py` in that repo.
 
 **The production host is neither of those.** Checked 24 Aug: `tararosesalon.com` answers as
 WordPress on LiteSpeed, which is LID's hosting. So this folder is the hand-off package. LID
-mounts it at `/en/ae/a-proper-look/`, and the `noindex` flip and any redirects happen there.
+mounts it at `/en/ae/junior-experience/`, and the `noindex` flip and any redirects happen there.
 
 The sibling `/menu/` page the footer and `#start` link to is **not built yet**. It is the
 next thing, and it inherits every pricing rule above.

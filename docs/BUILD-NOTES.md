@@ -1,4 +1,36 @@
-# A Proper Look, build notes
+# The Junior Experience, build notes
+
+## Third revision, 24 Aug 2026: the name is The Junior Experience
+
+**Emma-Louise's call as GM, and it overrides the framework's rename.** The framework retired
+The Junior Experience with four arguments and replaced it with A Proper Look. Emma's own
+playbook kept the original name throughout, including the hashtag in four caption templates,
+and her Lane 1 posts today. So the name is settled and the framework's argument 4, that
+*junior* must never appear in a URL, is overruled with it.
+
+Applied: `/en/ae/junior-experience/`, the title, all social meta, the eyebrow, the footer
+heading, the FAQ, the `campaign:junior-experience-2026` tag matching Emma's GHL spec, and the
+session ref prefix, now `JE-`. `css/a-proper-look.css` becomes `css/junior-experience.css`,
+and in the inlined tree the folder and `_css/page-junior-experience.css` moved with it.
+
+**Two copy calls made rather than asked, both reversible in one line:**
+
+1. **Buttons say "Book an appointment", not "Book The Junior Experience"**, which does not
+   read as a thing a person books.
+2. **The AED 300 hour lost its name and kept its description.** It was called A Proper Look,
+   which was both the campaign and the product. With the campaign renamed, the hour has no
+   name, and inventing one is not a build decision. It reads as "An hour that is only about
+   your hair" until somebody names it or drops it.
+
+**The open question this leaves, and it is the real one.** Emma's playbook contains no charged
+diagnostic hour and no AED 300. Its entry points are a Tone Reset from AED 130 and a Treatment
+plus Blowdry from AED 150, sold on rhythm. This page's primary card is a AED 300 hour sold on
+diagnosis. **A page named after her campaign should probably sell her offers.** Either the hour
+survives as an addition to her menu, or the card comes out and the three doors carry the page.
+That is one command either way, and it needs Emma rather than a developer.
+
+---
+
 
 ## Second revision, 24 Aug 2026, afternoon: Motor City is in
 

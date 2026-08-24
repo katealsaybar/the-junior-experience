@@ -1,4 +1,4 @@
-/* a-proper-look.css. A Proper Look (formerly The Unhurried Hour).
+/* junior-experience.css. The Junior Experience.
    Built to Layer 5, The Landing Page Handover. Only the blocks the voucher page
    did not already have: the Hero-B split, the three entry cards, the availability
    band, the select/textarea form fields, and the mobile sticky bar. Everything
@@ -119,7 +119,7 @@
 .avail b{ color:var(--ink); font-weight:500; }
 
 /* -------------------------------------------------------- FORM, extra controls
-   page-beauty-voucher.css styles .field input only. The A Proper Look form also
+   page-beauty-voucher.css styles .field input only. The Junior Experience form also
    uses selects and a textarea. The 16px floor is inherited from trs-core.css. */
 .field select,
 .field textarea{
