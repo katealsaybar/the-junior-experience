@@ -277,6 +277,8 @@
   transition:background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 .ochip:hover, .ochip:focus-visible{ background:var(--ink); color:var(--paper); }
+/* The scroll-spy marks the group on screen. Same invert as hover, held. */
+.ochip.active{ background:var(--ink); color:var(--paper); }
 @media(max-width:767px){
   /* Two rows of chips is already 96px of sticky chrome under a 75px nav, so the
      label gives its line back to the chips. */
