@@ -481,6 +481,12 @@ body{ overflow-x:clip; }
 }
 .blonde-band__inner{ max-width:var(--maxw); margin:0 auto; }
 .blonde-band .sec-head{ margin-bottom:34px; }
+/* The shared .timeline is a five-column grid, sized for the five-step In-the-chair
+   sequence. The blonde rhythm has four steps, so the empty fifth track showed as a
+   grey block. Four columns here; the shared sheet stays untouched. */
+.blonde-band .timeline{ grid-template-columns:repeat(4,1fr); }
+@media (max-width:760px){ .blonde-band .timeline{ grid-template-columns:1fr 1fr; } }
+@media (max-width:440px){ .blonde-band .timeline{ grid-template-columns:1fr; } }
 @media(max-width:640px){
   .rband{ margin-top:52px; padding:34px var(--pad-x) 38px; }
   .mgroup + .rband, .blonde-band + .rband{ margin-top:56px; }
