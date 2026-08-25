@@ -1,5 +1,47 @@
 # The Junior Experience, build notes
 
+## Four reviews, one per junior stylist, 25 Aug 2026
+
+Kate asked for more, and suggested the Google Business Profile. **GBP would not give up its
+review list.** Maps serves a "limited view" without a session, and signed in as the profile
+owner neither the Maps place panel nor the Search knowledge panel exposes the review text to
+automation, only the count: Al Quoz shows 5.0 from 414. **The reviews are readable by hand in
+the browser, so if a specific one is wanted, paste it and it goes on in a minute.**
+
+**What was readable: the other two FINAL cards.** So the section is now four reviews, one per
+named junior stylist, covering all three delivering branches.
+
+| Review | Stylist | Branch | Span used |
+|---|---|---|---|
+| Elizabeth | Areanne | Al Quoz | The consultation sentence, which is this page's promise in a client's words |
+| Asma | Irlyn | Khalifa City | *"She made me feel comfortable, explained everything, and did such a beautiful job."* A first-time colour client who was nervous |
+| Marta | Eds | Mamsha Al Saadiyat | The opening two sentences, which are the strongest hook in the set |
+| An | May | Khalifa City | Talent and kindness in one appointment |
+
+Heading changed from *Two reviews* to *Four reviews*. The layout needed nothing: the grid is
+`auto-fit minmax(260px,1fr)` inside 760px, so four cards fall into 2x2.
+
+**How the two known faults were handled, because the framework says neither can just ship.**
+
+- **Irlyn's review thanks "Lynn" twice.** Rather than print a mismatch or drop the review, the
+  span used contains **no name at all**, and the attribution carries Irlyn. The visible problem
+  is gone; **the underlying question, whether she goes by Lynn with clients, is still open** and
+  is `trs-proof-builder`'s, per the Stylist roster page.
+- **Eds's review contains the typo *"Atfer months"*.** The span used stops before it, so
+  nothing is silently corrected and no `[sic]` is needed. **It still spells her name "Edz"
+  while the attribution says Eds**, which is a one-letter variance of her own nickname rather
+  than a different name, so it is left as the client wrote it. If brand review wants them
+  identical, it is one word either way.
+
+Both new quotes are contiguous spans, like the first two. Nothing is stitched, because the
+heading says *word for word*.
+
+**Still unsigned, and it now covers four clients rather than two:** nobody has confirmed in
+writing that these reviewers consented to their words on a public page. It sits with the
+claims table.
+
+---
+
 ## Three small ones, 25 Aug 2026
 
 **The first rail card was off-centre.** The pair sat right of the middle with dead mirror
