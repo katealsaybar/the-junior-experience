@@ -1,5 +1,46 @@
 # The Junior Experience, build notes
 
+## The live call round, 25 Aug 2026, 3pm: six small ones while Emma and Dawn watched
+
+Fixed one at a time against the deployed page during the review call, each verified
+locally and confirmed live before the next.
+
+1. **The pillar tag Emma circled went black.** The where-are-you story got its black
+   bands in the previous round, but the small RHYTHM tag she actually drew around was
+   still a light grey chip. Now an ink pill with the accent, matching the bands.
+2. **The blonde timeline showed an empty grey fifth track.** The shared `.timeline` is a
+   five-column grid, sized for the five-step In-the-chair sequence; the blonde rhythm has
+   four steps. Four columns for this one only, in the page sheet.
+3. **The group intros read too small and too tight on a phone** (Kate, on HOW YOU LEAVE).
+   Body copy up half a step with wider gaps, and HOW YOU LEAVE gets a hairline and real
+   space so it reads as its own beat rather than a caption stuck to the paragraph above.
+4. **The sign-off claim now follows Emma's document exactly.** The page said *"signed off
+   by a named senior... before anything is mixed"*, which is old-framework wording and
+   implies a per-stylist sign-off record that does not exist yet. Kate: follow Emma's all
+   the way. It is now her playbook's *"supervised by senior team members"*, in the
+   expertise intro, the proof card and both FAQ copies, still byte-identical. **This also
+   takes the Ruth sign-off table off the launch-blocking list**, since the page no longer
+   claims it.
+5. **The blonde body copy sat left-aligned under a centred heading.** Centred.
+6. **The URL hash never followed the scroll.** Kate was reading Treatment Courses on a
+   `#blowdries` URL. A scroll-spy in `nav-scroll.js` keeps the hash and the highlighted
+   chip matched to the group on screen: `replaceState` rather than `pushState`, so Back
+   does not replay every group scrolled past; the blonde band is in the spy map without a
+   chip, so the hash says where she is and no chip pretends to be it; above and past the
+   menu the hash clears. The active chip inverts, same as hover.
+
+**Environment note recorded once, because it cost three debugging detours:** the preview
+pane stops compositing when hidden, so native scroll events, resize events and
+requestAnimationFrame never fire there, and computed styles read mid-transition values.
+The spy's boundary logic was verified by replicating the computation synchronously at
+eight scroll positions; the handler wiring is the same scroll-event pattern as the nav
+shadow that has been live for weeks.
+
+All verified on both copies, `build.py --check` 85/85 throughout, every fix confirmed on
+the live URL before moving on.
+
+---
+
 ## Emma's live review round, 25 Aug 2026 afternoon: the pillars go up top and the page gets its bold
 
 Emma reviewed the pass-2 draft live on WhatsApp within the hour. Eight instructions, all
