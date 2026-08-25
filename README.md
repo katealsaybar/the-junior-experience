@@ -26,7 +26,7 @@ Read that before changing copy.
 ## Run it
 
 ```bash
-python -m http.server 8805 --directory "D:/WORK/Claude/claude-cowork-build/a-proper-look-page"
+python -m http.server 8807 --directory "D:/WORK/Claude/claude-cowork-build/a junior experience"
 ```
 
 Then open <http://localhost:8805/>. A server is needed rather than a double-click, because
@@ -37,7 +37,7 @@ the fonts are same-origin woff2 and `file://` blocks them.
 ## Layout
 
 ```text
-a-proper-look-page/
+a junior experience/
 ├── index.html                  markup only, no inline CSS, no inline JS
 ├── css/
 │   ├── fonts.css               @font-face, same-origin woff2, never a CDN
@@ -72,10 +72,15 @@ tracking reads the same `#svc` control.
 carries locked sentences that must not be paraphrased: the Confidence Promise band, and
 "That was never yours to work out alone." in the `#column` section.
 
-**Prices.** Four in the `#start` section and nowhere else: the consultation hour at AED 300, then
-the three doors at From 570 / 400 / 765. No percentage, no "save", no strike-through, no
+**Prices.** Seven in the `#start` section and nowhere else, since the fourth revision merged the
+two menus: the consultation hour at AED 300, then From 175 / 150 / 240 between visits and
+From 380 / 570 / 620 for the bigger visits. **The Tone Reset moved 130 to 175 on 25 Aug**, on
+Emma's edited playbook; it is also in the JSON-LD, and her own nine mentions of 130 have not
+been changed yet. No percentage, no "save", no strike-through, no
 countdown. Anything above `#start` that carries a number is a defect. The one exception is
 the hero support line, which carries AED 300 because Layer 5 B option 1 specifies it.
+**No course price is published yet**, and the blow-dry bundle's AED 240 does not reconcile
+with Emma's single-blow-dry price; see the fifth pass in `docs/BUILD-NOTES.md`.
 
 **The word junior** appears in the body in `#column` and once in the FAQ, as a plain
 statement about the stylists, always framed as demand rather than years. It must never
@@ -102,3 +107,7 @@ mounts it at `/en/ae/junior-experience/`, and the `noindex` flip and any redirec
 
 The sibling `/menu/` page the footer and `#start` link to is **not built yet**. It is the
 next thing, and it inherits every pricing rule above.
+
+**Read `docs/BUILD-NOTES.md` first.** The fifth pass, 25 Aug, checked this page against
+Emma's own campaign playbook as well as the framework, fixed four faults, and left six for
+Emma and Tara. Two of those six could change what the page leads on.

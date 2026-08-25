@@ -1,5 +1,190 @@
 # The Junior Experience, build notes
 
+## Sixth pass, 25 Aug 2026: the reprice is applied, and the rhythm has a section
+
+Kate's go-ahead, on the edited playbook being the basis from here.
+
+**1 · The Tone Reset is AED 175, not 130.** Two edits, as scoped: the card in `#start` and
+the `minPrice` on the Tone Reset offer in the JSON-LD. Nothing else on the page carried the
+number. **The seven prices are now 300 · 175 / 150 / 240 · 380 / 570 / 620.**
+
+**This creates one hard deadline rather than a task.** 130 still stands in nine places in
+Emma's own playbook: the offerings line, the blonde rhythm table, the Blonde Story body,
+four WhatsApp scripts, a social caption and the Toner Google ad. It also has to be the
+number on the Phorest service type. **All of it has to agree before the WhatsApp templates
+enter the Meta queue**, because that is the point after which the name and the price cannot
+change. Lane 2 ads go out this week, so the ad copy is the urgent one.
+
+**2 · Emma's master line now appears on the page.** New `#rhythm` section between
+`#availability` and `#start`, headed *"Great hair isn't one visit. It's a rhythm."*, which is
+the idea her whole campaign sits under and which this page did not contain at all. It also
+gives the **Blonde Story** somewhere to land: her hook, her week-four warmth, her
+*"week eight can look like week one"*, written to the page's voice rather than pasted.
+
+- **It carries no price**, deliberately. It sits above `#start`, where the rule is that any
+  number above that point is a defect. Verified: the only price token above `#start` is the
+  hero's AED 300, exactly as before.
+- Placed at `stone-soft` so the cream/paper alternation still holds either side of it.
+- Verified at 1280 and 375: no overflow inside the section, no page scroll, JSON-LD still
+  parses, no console errors.
+- **It is new client-facing copy**, so it goes through the `trs-brand-guardian` gate with
+  the rest of the page. The master line itself is Emma's, verbatim.
+
+---
+
+## What "it runs to the end of the year" changes, 25 Aug
+
+New from Kate, and **it is not written down anywhere yet**: neither the playbook nor the
+framework carries a close date. Notion's own default (item 9, L2) is *"there is no close
+date, so no urgency language ships at all"*, overridable any time. **A launch on 21 Sep and
+a close on 31 Dec is a fourteen-week run**, and four things follow that nobody has ruled on.
+
+**1 · The load-bearing sentence on this page assumes the price is permanent.** In `#start`:
+*"Not an introductory rate: it's what an appointment with her costs, for as long as you book
+her."* That is the locked Belief 5 line, and it is the one that kills the *"will it go up?"*
+objection the framework calls the quiet killer of the in-chair rebook. **If these are
+campaign prices that revert on 1 January, that sentence is false and has to come out**, and
+the page loses its answer to the biggest objection on it. If they are simply the junior
+price list, the sentence stands and "the campaign ends" only means the marketing stops.
+**Emma. One line, and it decides whether a locked sentence survives.**
+
+**2 · Same problem, smaller, in `#availability`:** *"this is not a window we reopen on a
+schedule."* True of hours that vanish as the books fill. Not true of a campaign that closes
+in December and re-runs in 2027.
+
+**3 · Prepaid money crosses the close date, and nothing says what happens to it.** The x3
+and x5 bundles, the treatment courses, the four-week membership and the 10-pack are all
+prepaid, and the page sells the bundle as *"prepaid"* in as many words. Sessions bought in
+November are redeemed in January. **Emma has already asked for a validity on the 10-pack; the
+same question applies to all of them.** Without a written rule, unredeemed sessions become a
+front-desk argument in January, and Notion item 15 (L2) already treats prepaid course cash as
+deferred revenue tracked weekly. **No validity has been invented here.**
+
+**4 · Two calendar consequences.** The voucher-collision work covered 15 to 30 September
+only; a run to year end means the whole Q4 calendar needs the same check, on the same four
+branch numbers, and Emma owns both. And **what happens to the page itself on 31 December**
+belongs in the LID hand-off: it stays live, or it comes down with a redirect target. LID
+mounts the page and holds the 301s, so if the hand-off is silent, January leaves a live
+campaign page nobody owns.
+
+**Nothing about the close date has been written into the page.** Urgency copy is now
+unlocked and is not honest four months out; it is a December action, and it should be a
+decision rather than a drift.
+
+---
+
+## Emma's edited playbook, 25 Aug 2026: three changes, one of them a price on this page
+
+`JUNIOR EMMA AUG 26 - edited.docx` replaces the version the fifth pass was read against.
+Diffed in full: **three substantive edits, all in Section 02, all written as questions to
+us rather than decisions.** Everything else is identical apart from one table in Section 08
+reflowing its keyword cells onto single lines.
+
+**1 · The blow-dry package grid, new, and it settles our AED 240.**
+
+| Package | Short / Fine | Medium | Long / Thick | Extra Long |
+|---|---|---|---|---|
+| The Blowdry Edit x3 | 240 | 288 | 336 | 432 |
+| The Blowdry Series x5 | 375 | 450 | 525 | 675 |
+
+**So *Three from AED 240* on the page is correct** and the fifth pass's fault 4 is closed:
+240 is the Short/Fine band, not a mis-typed 360. **What it exposes instead** is that the
+grid implies a single junior blow-dry of AED 100 at Short (240 ÷ 3 ÷ 0.8), while her own
+body line and her Google ad both say *single blowdry from AED 150*. One of those two is
+wrong, and only the single price is advertised anywhere. **The page carries neither**, so
+nothing here blocks it.
+
+**Her labels carry percentages.** `x3 (20% off)` and `x5 (25% off)` are fine as internal
+names and auto-fail as client copy. The page's *Three from AED 240* stays as it is.
+
+**2 · The membership is capped and the 10-pack is questioned.** "Unlimited 4-week" becomes
+**two blow-dries a week across four weeks, from AED 799**, which retires an open-ended
+promise nobody could staff. The 10-blow-dry package at AED 850 she wants **removed, or
+given a validity**. Neither is on the page, so this changes nothing here yet, but if either
+ever reaches the page the word *unlimited* cannot come with it.
+
+**3 · The Tone Reset reprice, and this one touches the page.** She reads the published
+130 / 180 / 230 / 330 as more than 50% off and proposes a 30%-off computation instead:
+**Short 175 · Medium 225 · Long 275 · Extra Long 380.**
+
+- **On the page it is two edits:** the Tone Reset card, *From AED 130*, and the `minPrice`
+  on the Tone Reset offer in the schema. Nothing else on the page repeats the number.
+- **In her own document it is nine.** 130 still stands in the offerings line, the blonde
+  rhythm table, the Blonde Story body, four WhatsApp scripts, a social caption and the
+  Toner Google ad. **Repricing is not a one-cell change**, and the ads are Lane 2, going
+  out this week.
+- **The framework agrees with her instinct.** Layer 2's own table rates "From AED 130" at
+  1.2x and marks it *Fails, deep red*. At 175 it clears into a defensible band. This is the
+  one edit that improves the commercial model rather than only the optics.
+- **Not applied.** It is phrased as a question, and it moves a published price. **One word
+  from Emma and it is two lines here plus a pass over her own nine.**
+
+---
+
+## Fifth pass, 25 Aug 2026: checked against Emma's playbook, four faults fixed
+
+Kate asked for the page to be read against two sources at once: the Notion framework and
+**Emma's own campaign playbook**, `JUNIOR EMMA AUG 26.docx`, which is the document the
+social, WhatsApp and paid lanes are actually being run from. Ten mismatches came out of it.
+**Four were fixable without anybody's sign-off and are done, in both copies.**
+
+1. **The retired campaign name was still in client-facing copy.** Both WhatsApp prefills
+   said *"I read about A Proper Look"*. The name was overruled on 24 Aug and these two
+   strings were missed. Now *"I read about The Junior Experience"*.
+2. **The branch tag never fired from her own form.** `branch` was read from the URL only,
+   which is right for the four GBP profiles and wrong for everything else: a click from
+   Instagram, a caption link or a stylist's own bio arrived with no branch at all, and
+   Emma's spec wants a branch tag on every lead at creation. Her salon choice now fills it
+   in Emma's vocabulary (`abudhabi` / `dubai-alquoz` / `dubai-motorcity`). **A `?branch=`
+   on the URL still wins**, so GBP attribution is untouched. *"Either Dubai salon is fine"*
+   has no tag in her list, so it is left blank rather than guessed; the `salon` field still
+   carries what she said.
+3. **`offering:treatment-course` could never fire.** Treatment courses are one of the six
+   required offering tags, a whole offering group in her playbook, and one of her ten KPIs
+   (Treatment Course Conversion, 20%). The reason select had no course option, so a course
+   lead was untaggable and the KPI had no source. Added as *"A course of treatments, three
+   or five"*, mapped to `treatment-course`. **No course price was added to the menu**, on
+   purpose: see the blow-dry arithmetic below, which is the same unresolved problem.
+4. **The page sold colour at four salons.** The sign-off default in force (close-out item
+   84) is that each stylist is bookable only for the families on her own card, which puts
+   full colour at Khalifa City only, and Motor City's pair at root colour rather than full.
+   The menu offered The Root Revival and The Colour Immersion with no branch limit and the
+   salon select allowed any pairing, so Saadiyat plus Colour Immersion was bookable. One
+   honest line now sits above the price-band note. **It goes away the day the sign-off
+   table exists**, which is half an hour of Ruth's time.
+
+Verified in a browser: course at Saadiyat gives `offering:treatment-course` +
+`branch:abudhabi`, smoothing at Motor City gives `smooth-edit` + `dubai-motorcity`, a GBP
+link keeps its own branch, "not sure" clears every derived field, both prefills carry the
+new name, no console errors, no horizontal scroll.
+
+### The six that were not ours to fix
+
+Left for Emma and Tara, and the first two are the expensive ones.
+
+| # | What | Whose call |
+|---|---|---|
+| 1 | **Two entry prices are live at once.** Emma's playbook has no charged diagnostic hour and no AED 300 anywhere; her entry points are the Tone Reset from 130 and Treatment plus Blow-dry from 150. The page still leads on the hour in the hero and as the featured card | Emma. One command either way |
+| 2 | **The master line is missing.** *"Great hair isn't one visit. It's a rhythm."* is the idea her whole campaign sits under and it is going out on Lane 1 social now. The word *rhythm* appears nowhere on this page, so the ads and the page read as two campaigns | Emma, then a copy pass |
+| 3 | **The Blonde Story has nowhere to land.** She runs a dedicated Meta blonde audience with its own hook pointing at the Tone Reset. This page has no mention of blonde, brassiness or the week-four toner. The card is here; the story that sells it is not | Emma, then a new section |
+| 4 | **The blow-dry arithmetic does not reconcile. ANSWERED 25 Aug** by the package grid in her edited playbook, above: AED 240 is the Short/Fine band for the x3 and the page is right. What is left is her *single blowdry from AED 150* against a grid that implies 100 at Short, and the course prices, which are still unpublished | Her single-blow-dry band, and a course grid |
+| 5 | **The senior-column framing breaks her rule.** Her SAY THIS / NOT THIS table says we never put senior stylists down. The hero premise, section 3 and the founder block all say a senior column is booked to the minute and cuts the consultation first. Already on the escalation list from 21 Aug | Tara. Her words or not at all |
+| 6 | **Her no-jargon rule** against *"mineral load, scalp, porosity and bond"*, which is not explained in plain English immediately after | Copy pass, with the brand gate |
+
+**One open question created by fix 2, and it is a real one.** If a woman arrives on an Al
+Quoz GBP link and then selects Khalifa City, `branch` stays `dubai-alquoz` (attribution)
+while `emirate` says `abudhabi` (her answer). The two tags disagree on purpose and the
+`salon` field carries the truth, so reception can see it. If Emma would rather her stated
+salon won the routing tag, that is one line, and it costs the GBP-profile attribution.
+
+**Still open from earlier passes, unchanged:** the OG image at `/og/junior-experience.jpg`
+does not exist, so every share renders blank; the founder block is Tara's first person but
+not Tara's words; the claims table nobody has signed off; and the formal
+`trs-brand-guardian` gate runs on the preview URL before hand-off. The colour note added in
+fix 4 is new client-facing copy and goes through that gate with everything else.
+
+---
+
 ## Fourth revision, 24 Aug 2026: the price menu is combined
 
 Kate's call: combine the two menus. It fixes more than it merges. The framework's three

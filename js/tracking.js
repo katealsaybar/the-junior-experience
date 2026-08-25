@@ -39,13 +39,18 @@
      carry ?channel=gbp&branch=<slug> and the four profiles cannot be told apart without
      them. product and emirate derive from her own selections, never typed. */
   set('channel', q.get('channel')||'');
-  set('branch', q.get('branch')||'');
+  var urlBranch=q.get('branch')||'';
+  set('branch', urlBranch);
   /* offering: uses Emma's exact GHL tag vocabulary so the page feeds her pipeline
      without a translation step. product stays look-vs-door, which is what Layer 4
      measures the conversion on. */
   var OFFERING={toner:'toner-reset',treatment:'treatment-blowdry',bundle:'blowdry',
     root:'colour-package',colour:'colour-package',smoothing:'smooth-edit',
-    scalp:'treatment-blowdry'};
+    scalp:'treatment-blowdry',course:'treatment-course'};
+  /* branch, in Emma's GHL vocabulary. Her list has no tag for "either Dubai salon", so
+     that one is left blank rather than guessed; the salon field still carries her answer. */
+  var BRANCH={'khalifa-city':'abudhabi','saadiyat':'abudhabi','either-abudhabi':'abudhabi',
+    'al-quoz':'dubai-alquoz','motor-city':'dubai-motorcity'};
   /* Derived fields must CLEAR as well as fill. set() above deliberately ignores an
      empty value, which is right for a UTM that arrives once and must not be wiped by
      a later empty read. It is wrong here: if she picks The Smooth Edit and then
@@ -58,6 +63,10 @@
     reset('product', sv ? (sv==='look'?'look':(sv==='unsure'?'':'door')) : '');
     reset('offering', OFFERING[sv]||'');
     reset('emirate', sa ? ((sa==='al-quoz'||sa==='motor-city'||sa==='either-dubai')?'dubai':'abudhabi') : '');
+    /* A GBP link carries ?branch= and wins. Everything else, Instagram, a caption link,
+       a stylist's own bio, arrives without one, so her salon choice fills it: Emma's spec
+       wants a branch tag on every lead, not only on the ones that came from Google. */
+    if(!urlBranch) reset('branch', BRANCH[sa]||'');
   };
   f.addEventListener('change',deriveTags); deriveTags();
 
