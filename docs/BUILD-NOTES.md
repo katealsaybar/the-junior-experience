@@ -1,5 +1,31 @@
 # The Junior Experience, build notes
 
+## The hero, 25 Aug 2026: it was not a junior stylist either
+
+Same rule as the rail, applied to the largest photograph on the page. `hero-mapping.jpg`
+showed the senior team, so the page opened by promising the junior column and illustrating it
+with someone else.
+
+**Now `hero-junior.jpg`, from `BRIT8563`** in Tara's `JUNIOR STYLIST` folder: a junior stylist
+finishing her client's hair, the client smiling straight at the camera. It was chosen against
+the two shapes the hero actually renders in, a roughly 1.4:1 panel on desktop and a 1.9:1 band
+under 833px, both `cover`, and it holds in both at the existing `center 30%`. 1600x1066 at
+184KB, the same budget as the file it replaces. `hero-mapping.jpg` is deleted from this repo
+and stays in the page tree, where other pages still use it.
+
+Rejected: `BRIT7431` reads as the salon floor rather than one appointment, and `BRIT2650` and
+`BRIT7419` both have the client's face turned away.
+
+**The OG image now exists.** `og/junior-experience.jpg`, 1200x630 at 86KB, from the same frame,
+so a shared link stops rendering blank. **The meta tag still points at
+`https://www.tararosesalon.com/og/junior-experience.jpg?v=1`**, the production domain, which is
+correct and deliberate: LID mounts the page there. That means the preview stays blank on the
+Pages URL and starts working the day LID takes the folder, with the file already in it.
+
+Alt text and `og:image:alt` both rewritten, since they described the old photograph.
+
+---
+
 ## Reading size and the reviews, 25 Aug 2026
 
 **The body copy was a step too small** beside a 52px headline, so it is one step up
