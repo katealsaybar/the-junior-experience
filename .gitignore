@@ -10,3 +10,12 @@ Thumbs.db
 # Never commit
 .env
 .env.*
+
+# Meeting recordings and transcripts. This repo is public and its Pages site is live.
+Emma-Louise Usher's Personal Meeting Room*
+*.vtt
+*.transcript.txt
+
+# Internal build brief: quotes a private meeting, and names which stylists are not yet
+# signed off on colour. Lives beside the code, never ships.
+docs/REBUILD-PROMPT.md
