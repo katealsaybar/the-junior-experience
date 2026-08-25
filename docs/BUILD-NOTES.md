@@ -1,5 +1,24 @@
 # The Junior Experience, build notes
 
+### Final prices from the team, 25 Aug 2026, 4:44pm
+
+Emma forwarded `junior_emma_aug_26_edited.docx` to the marketing group: *"Final doc with
+final prices confirmed by team."* Diffed in full against the version this page was built
+from: **exactly two changes, both new two-band price grids in Section 02.**
+
+- **Treatment and Blow-dry singles** now carry Short-to-Medium and Long-to-Extra-Long
+  bands. The from prices on the card were already the first band, so nothing on the face
+  changed; the second band ships in the Prices-by-length disclosure (250 / 250 / 350 /
+  250 / 300).
+- **Treatment Courses** get the same two bands (415 / 625 by course in the second band),
+  plus **a new item: the Caviar scalp course, three sessions from AED 525**, and the
+  existing scalp course is explicitly the Vegan one. Both on the card now.
+
+**Unchanged in her final doc, so still open:** the single blow-dry (her body copy says
+from 150, her own bundle grid implies 100 at Short; the page still carries neither), the
+Tone Reset body copy still says 130 in nine places against the 175 the page carries, the
+10-pack validity, and the colour length bands.
+
 ## The live call round, 25 Aug 2026, 3pm: six small ones while Emma and Dawn watched
 
 Fixed one at a time against the deployed page during the review call, each verified
