@@ -27,7 +27,7 @@
 }
 .hero-b .lede{
   margin:18px 0 0; max-width:46ch;
-  font-family:var(--fb); font-size:clamp(15px,1.15vw,17px); font-weight:300;
+  font-family:var(--fb); font-size:clamp(16px,1.2vw,18.5px); font-weight:300;
   line-height:1.62; color:var(--ink-soft);
 }
 .hero-b .support{
@@ -55,7 +55,7 @@
     height:clamp(140px, 24vh, 240px); aspect-ratio:auto;
   }
   .hero-b .htext{ padding-top:22px; }
-  .hero-b .lede{ font-size:15px; }
+  .hero-b .lede{ font-size:16px; }
   /* On a phone the support chips sit under the pill, not above it. That is 56px
      of vertical budget, and it is the difference between the CTA landing at 702
      and at 646 on a 375x667 screen. */
@@ -83,7 +83,7 @@
   font-size:clamp(19px,1.7vw,23px); line-height:1.26; color:var(--ink); margin:0;
 }
 .door p{
-  margin:14px 0 0; font-family:var(--fb); font-size:14.5px; font-weight:300;
+  margin:14px 0 0; font-family:var(--fb); font-size:15.5px; font-weight:300;
   line-height:1.62; color:var(--ink-soft);
 }
 .door .from{
@@ -99,7 +99,7 @@
 .door .pill{ margin-top:22px; align-self:flex-start; }
 .doors-unsure{
   margin:30px auto 0; max-width:62ch; text-align:center;
-  font-family:var(--fb); font-size:15.5px; line-height:1.62; color:var(--ink);
+  font-family:var(--fb); font-size:16.5px; line-height:1.62; color:var(--ink);
 }
 .doors-unsure em{ font-family:var(--fd); font-style:italic; }
 .doors-unsure a{ color:#3aa892; }
@@ -114,7 +114,7 @@
    real one. No countdown, no fabricated close date. */
 .avail{
   max-width:64ch; margin:0 auto; text-align:center;
-  font-family:var(--fb); font-size:16px; font-weight:300; line-height:1.68; color:var(--ink-soft);
+  font-family:var(--fb); font-size:17px; font-weight:300; line-height:1.68; color:var(--ink-soft);
 }
 .avail b{ color:var(--ink); font-weight:500; }
 
@@ -123,7 +123,7 @@
    uses selects and a textarea. The 16px floor is inherited from trs-core.css. */
 .field select,
 .field textarea{
-  width:100%; font-family:var(--fb); font-size:15px; color:var(--ink);
+  width:100%; font-family:var(--fb); font-size:16px; color:var(--ink);
   background:var(--paper); border:1px solid var(--hair); border-radius:var(--r-sm);
   padding:14px 16px; transition:border-color var(--dur) var(--ease);
 }
@@ -131,7 +131,7 @@
 .field select:focus,
 .field textarea:focus{ outline:2px solid var(--accent-deep); outline-offset:3px; border-color:var(--accent-deep); }
 .field .help{
-  margin:8px 0 0; font-family:var(--fb); font-size:12.5px; font-weight:300;
+  margin:8px 0 0; font-family:var(--fb); font-size:13.5px; font-weight:300;
   letter-spacing:0; text-transform:none; color:var(--ink-soft);
 }
 .field--hidden{ display:none; }
@@ -194,5 +194,14 @@
 }
 
 .menu-head{ font-family:var(--fd); font-size:clamp(21px,2.6vw,26px); font-weight:500; text-align:center; margin:38px 0 6px; color:var(--ink); }
-.menu-lede{ max-width:56ch; margin:0 auto 20px; text-align:center; font-size:15px; line-height:1.6; color:var(--ink-soft); }
-.menu-note{ max-width:62ch; margin:30px auto 0; text-align:center; font-size:14.5px; line-height:1.65; color:var(--ink-soft); }
+.menu-lede{ max-width:56ch; margin:0 auto 20px; text-align:center; font-size:16px; line-height:1.6; color:var(--ink-soft); }
+.menu-note{ max-width:62ch; margin:30px auto 0; text-align:center; font-size:15.5px; line-height:1.65; color:var(--ink-soft); }
+
+/* ------------------------------------------------------------- READING SIZE
+   25 Aug: the body copy was a step too small next to a 52px headline. Raised one
+   step throughout. These four live in trs-blocks.css, which is the shared design
+   system and must not be forked, so they are overridden here for this page only. */
+.tcard blockquote{ font-size:16.5px; }
+.tcard cite{ font-size:16px; }
+.tstep b{ font-size:17px; }
+.faq .ans{ font-size:17px; }

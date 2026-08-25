@@ -1,5 +1,43 @@
 # The Junior Experience, build notes
 
+## Reading size and the reviews, 25 Aug 2026
+
+**The body copy was a step too small** beside a 52px headline, so it is one step up
+throughout: section prose 16 to 17px, the hero sub-line's clamp from 15-17 to 16-18.5,
+door descriptions 14.5 to 15.5, menu lede 15 to 16, menu note 14.5 to 15.5, availability
+16 to 17, the form's help text 12.5 to 13.5, and the review cards, the timeline and the FAQ
+answers overridden to match. **`.tcard`, `.tstep` and `.faq .ans` live in `trs-blocks.css`,
+which is the shared design system and must not be forked**, so they are overridden in the
+page stylesheet instead. Incidentally the selects and textarea moved 15 to 16px, which also
+retires the iOS zoom-on-focus that a 15px control causes.
+
+**The reviews were the wrong stylists, and Kate caught it: Zandri is a senior stylist.**
+A page selling the junior column was proving itself with a review of the senior team, and the
+second review named nobody at all. Both are replaced with real five-star reviews of named
+junior stylists, verbatim from the FINAL cards, one per emirate:
+
+- **Elizabeth on Areanne, Al Quoz.** A first-time client, and the sentence that matters is
+  *"really took the time to find out my hair concerns and gave a great recommendation for my
+  hair type"*. That is this page's entire promise, in a client's own words rather than ours.
+- **An on May, Khalifa City.** *"Not only is she incredibly talented, but she is also so kind
+  and made the whole appointment such a pleasure."*
+
+Both are contiguous spans, not stitched from separate sentences, because the section heading
+says *word for word* and it has to be true. **The attributions now carry the stylist and the
+branch**, which is what makes them proof of the junior column rather than of the salon.
+
+**Two reviews deliberately not used, on the framework's own findings.** Irlyn's card review
+thanks *"Lynn"* twice, and a page that names her Irlyn while quoting a review about Lynn reads
+as manufactured proof. Eds's carries the typo *"Atfer months"*, which cannot be silently
+corrected and needs either a `[sic]` or the reviewer's permission. Both are recorded on the
+Stylist roster page in Notion, and both need `trs-proof-builder`, not a developer.
+
+**Still unsigned:** these are real reviews from the cards, but nobody has confirmed in writing
+that the clients consented to their words appearing on a public page. It sits with the rest of
+the claims table.
+
+---
+
 ## Photography, 25 Aug 2026: the rail was the voucher campaign's photography, and then it was the wrong stylists
 
 Two faults, found in that order, both by Kate on the live page.
