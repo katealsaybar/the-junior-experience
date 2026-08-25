@@ -56,8 +56,11 @@
     order:-1; width:100%; min-height:0;
     height:clamp(150px, 26vh, 250px); aspect-ratio:auto; margin-top:20px;
   }
-  .hero-b .htext{ padding-top:22px; }
-  .hero-b .lede{ font-size:16px; }
+  /* Centred below the split point, matching every section head under it.
+     Kate, 25 Aug, from the phone. Desktop keeps the left-set split. */
+  .hero-b .htext{ padding-top:22px; text-align:center; align-items:center; }
+  .hero-b .lede{ font-size:16px; margin-inline:auto; }
+  .hero-b .cta-row{ display:flex; flex-direction:column; align-items:center; gap:16px; }
   .hero-b .cta-row{ margin-top:20px; }
 }
 
