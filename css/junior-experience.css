@@ -283,10 +283,15 @@
 /* The scroll-spy marks the group on screen. Same invert as hover, held. */
 .ochip.active{ background:var(--ink); color:var(--paper); }
 @media(max-width:767px){
-  /* Two rows of chips is already 96px of sticky chrome under a 75px nav, so the
+  /* Kate, 25 Aug: the free wrap docked as a ragged 2/3/1 honeycomb and read as
+     clutter. A 3x2 grid instead: six equal chips, two even rows, one block. The
      label gives its line back to the chips. */
   .offer-nav__lbl{ display:none; }
-  .ochip{ min-height:40px; padding:0 13px; font-size:11.5px; letter-spacing:.08em; }
+  .offer-nav__row{ display:grid; grid-template-columns:repeat(3,1fr); gap:7px; width:100%; }
+  .ochip{
+    width:100%; justify-content:center; min-height:40px; padding:0 4px;
+    font-size:11px; letter-spacing:.05em;
+  }
 }
 
 /* ------------------------------------------------------- THE RHYTHM MARKERS
