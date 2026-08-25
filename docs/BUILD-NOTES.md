@@ -38,6 +38,21 @@ desktop and beheaded two of the three on mobile. Final geometry, all full height
 originals at 6720px or 5783px wide, so roughly 3x the pixels needed: listens at cx 0.32,
 looks at cx 0.55, explains at cx 0.40. Every one checked at both ratios before shipping.
 
+**Crop fix, same day.** Kate again: the photographs were right and the framing was ugly.
+Two causes, and the second was the real one.
+
+1. **The files were 2:3 and the card is 3:4**, so the browser was quietly trimming 5.5% off
+   the top and bottom of a composition made without seeing it. Two of the three lost the top
+   of a head that way. **The files are now 546x728, the card's own ratio**, so what is
+   composed is what ships. `width`/`height` in the markup moved with them.
+2. **The mobile rule was `aspect-ratio:16/10`**, a landscape band driven through a portrait
+   photograph, showing the middle 42% of the height. It beheaded whoever was standing up,
+   which in every one of these frames is the stylist. **Now `4/5`, which shows 94%.** The rail
+   is a single column under 560px, so there was never a reason for it to be letterboxed.
+
+Final framing, full height, horizontal centre only: listens cx 0.40, looks cx 0.50, explains
+cx 0.48. Checked as rendered cards at 3:4 and 4:5, not as raw files.
+
 **Four files deleted from this repo:** the three reused ones plus `exp-floor.jpg`, unused
 since the hero changed. They stay in the page tree, where the Bahrain founding page and the
 beauty voucher page still use them. **This supersedes the Photography section further down**,
