@@ -1,5 +1,42 @@
 # The Junior Experience, build notes
 
+## Photography, 25 Aug 2026: the rail was the voucher campaign's photography
+
+Kate spotted it on the live page. **The three photographs in the `#hour` rail were the same
+three files the Wellness Voucher pack ships**, byte for byte: `exp-authentic.jpg`,
+`exp-colour.jpg` and `exp-people.jpg` all sit in `wellness-voucher-approval-pack/assets/`.
+Two campaigns to the same client list, running six weeks apart, on the same pictures.
+
+**Replaced from Tara's and Marish's libraries.** Sampled 15 frames from
+*TARA FOUND IMAGES > CONSULTATIONS:INTERACTION* and *JUNIOR STYLIST* (tara@), and 21 from
+*stylists working images* (marish@). Marish's folder is the better match: it is the shoot
+where stylists are working rather than posing. Every candidate was checked against a contact
+sheet of all sixteen voucher-pack images first, so nothing here repeats.
+
+| Slot | New file | Source | Why |
+|---|---|---|---|
+| She listens first | `consult-listens.jpg` | `BRIT9396` (marish@) | Two women seated, mid-conversation, the hair plan on her lap. The appointment before anything is touched |
+| Then she looks properly | `consult-looks.jpg` | `BRIT0317` (marish@) | Hands in dry, ungowned hair, client watching. This is the examination shot the framework's hero brief asks for, and the rail is where it belongs |
+| Then she explains it | `consult-explains.jpg` | `BRIT6035` (marish@) | The stylist talking, with the *We see you beyond the hair* card in frame. In-frame copy, and it happens to agree with the page footer |
+
+**The crops were composed for the mobile band, not the desktop card.** `.hour-rail img` is
+`aspect-ratio:3/4` above 559px and **`16/10` below it**, with `object-fit:cover`, so a phone
+shows only the middle 42% of the height of each 546x820 file. The first pass was cropped for
+desktop and beheaded two of the three on mobile. Final geometry, all from full-resolution
+originals at 3x the needed size: listens full height at cx 0.52, looks 90% height from the
+top at cx 0.58, explains 78% height at cx 0.68. Checked at both ratios before shipping.
+
+**Four files deleted from this repo:** the three above plus `exp-floor.jpg`, unused since the
+hero changed. They stay in the page tree, where the Bahrain founding page and the beauty
+voucher page still use them. **This supersedes the Photography section further down**, which
+asked for `1.png`, `BRIT6639.jpg` and `10.png`; those were named before either library had
+been looked at properly, and `BRIT9396`/`0317`/`6035` are the better three.
+
+**Still open:** the hero and the founder portrait are untouched, and the OG image at
+`/og/junior-experience.jpg` still does not exist, so every share renders blank.
+
+---
+
 ## Sixth pass, 25 Aug 2026: the reprice is applied, and the rhythm has a section
 
 Kate's go-ahead, on the edited playbook being the basis from here.
