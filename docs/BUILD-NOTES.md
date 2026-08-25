@@ -1,5 +1,28 @@
 # The Junior Experience, build notes
 
+## Three small ones, 25 Aug 2026
+
+**The first rail card was off-centre.** The pair sat right of the middle with dead mirror
+space on the left. Recut at cx 0.48 and 88% of the height, so the two faces straddle the
+centre line and fill the frame. Judged against a drawn centre line rather than by eye.
+
+**Three THENs in a row read as filler**, and Kate asked for it to be counted instead.
+**It is now First / Then / After that / Next / Last, and the digits are deliberately absent.**
+Numbering these five is exactly what brand review blocked on 21 Aug: a numbered five beside
+the **8-Step Hair Plan** re-creates the retired *5-Step Consultation*, which
+`.claude/rules/client-facing-content.md` says must not be restored. Five distinct words carry
+the sequence with no count implied. **If Tara wants real numerals, that is her call plus the
+brand gate, and it is one line here.**
+
+**Every small-caps label was fine print.** Eyebrows, the hero support chips, the price labels,
+the rail captions and the step words were set at 10 to 12px. All up one step, with
+letter-spacing eased so the wider glyphs do not add a line on a phone: `.eyebrow` 11 to 12.5,
+`.tstep .wk` 10 to 11.5, form labels 12 to 13, consent 13 to 14, stars 13 to 14, nav links
+11.5 to 12.5. Six of those live in `trs-core.css` and `trs-blocks.css`, which are shared and
+must not be forked, so they are overridden in the page sheet.
+
+---
+
 ## The hero, 25 Aug 2026: it was not a junior stylist either
 
 Same rule as the rail, applied to the largest photograph on the page. `hero-mapping.jpg`

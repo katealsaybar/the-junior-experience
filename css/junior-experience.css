@@ -34,7 +34,7 @@
   display:flex; flex-wrap:wrap; gap:8px 18px; margin:22px 0 0; padding:0; list-style:none;
 }
 .hero-b .support li{
-  font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  font-size:12.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
   color:var(--ink-soft);
 }
 .hero-b .cta-row{ margin-top:28px; }
@@ -88,7 +88,7 @@
 }
 .door .from{
   display:block; margin:20px 0 0;
-  font-size:11px; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
+  font-size:12.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
   color:var(--ink-soft);
 }
 .door .from b{
@@ -183,7 +183,7 @@
 }
 .hour-rail figcaption{
   margin-top:11px; text-align:center;
-  font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  font-size:12.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
   color:var(--ink-soft);
 }
 @media(max-width:559px){
@@ -205,3 +205,18 @@
 .tcard cite{ font-size:16px; }
 .tstep b{ font-size:17px; }
 .faq .ans{ font-size:17px; }
+
+/* --------------------------------------------------------------- LABEL SIZE
+   25 Aug: every small-caps label was set at 10 to 12px, which reads as fine print
+   rather than as structure. Up one step, with letter-spacing eased slightly so the
+   wider glyphs do not add a line on a phone. .eyebrow, .tstep, the form labels and
+   the consent line live in the shared sheets, so they are overridden here. */
+.eyebrow{ font-size:12.5px; letter-spacing:.3em; }
+.tstep .wk{ font-size:11.5px; }
+.field label{ font-size:13px; }
+.radio-legend{ font-size:13px; }
+.trust .row>span{ font-size:12.5px; }
+.pay-trust__lbl{ font-size:12px; }
+.reserve .consent{ font-size:14px; }
+.trs-nav .nav-link{ font-size:12.5px; }
+.tcard .stars{ font-size:14px; }
