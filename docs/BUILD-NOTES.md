@@ -1,5 +1,26 @@
 # The Junior Experience, build notes
 
+### Kate's ruling, 25 Aug evening: Emma's latest document is the price authority
+
+The Phorest per-branch exports (22 Jul: KCA, SAA, AQ; no Motor City file) carry a real
+junior column, and reconciling it against the page validated the campaign maths: the Tone
+Reset bands and both Smooth Edit prices are the Phorest junior-plus-blow-dry sums at
+exactly 30% off, and the Root Revival from-price matches the same rule. Two divergences
+came out of it: **Phorest's junior single blow-dry is AED 110** against the document's
+150, and the Colour Immersion from-price of 570 computes to the Medium band rather than
+Short. **Kate's call: the latest document Emma sent (final, team-confirmed prices) wins
+over the Phorest computation.** So the single blow-dry now ships at from AED 150, as one
+line under the bundle cards rather than a fourth card. The earlier hold on printing 150
+was pending Emma confirming the number; her final document reaffirming it is that
+confirmation.
+
+**For ops, not the page:** treatments, scalp and keratin have no junior column in Phorest
+at all yet, so the campaign's treatment services need Phorest setup before they are
+bookable (Emma's own Lane 3 list already carries the bundle-tracking version of this).
+And three rows look like Phorest data errors worth a check: AQ FH Foils (Roots to
+Ends)-MD junior at 985 against 665 elsewhere, the Partial Foils series priced higher at
+KCA than SAA/AQ, and Root Hairline at 110 in SAA against 120 elsewhere.
+
 ### Final prices from the team, 25 Aug 2026, 4:44pm
 
 Emma forwarded `junior_emma_aug_26_edited.docx` to the marketing group: *"Final doc with
