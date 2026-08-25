@@ -1,5 +1,296 @@
 # The Junior Experience, build notes
 
+## Pass 2 on Emma's review, 25 Aug 2026: the menu is the page now
+
+Ten action items came out of the 25 Aug meeting. All ten are on the page. The shape
+of the change is that **the offerings stopped being a section near the bottom and became
+the page**, with the rhythm as the thing that organises them.
+
+**The order, and it is deliberate.** Hero, reframe band, offer nav, the menu, then the
+proof. Everything that used to sit between the hero and the prices (three prose sections,
+the awards, the reviews) is now below them. Emma: *"the offerings need to be way higher"*
+and *"there's a lot of fluff on there about the business."* The press strip moved down to
+sit with the awards and reviews, which is where credibility about the business belongs.
+
+**The menu uses the rhythm before the Rhythm section explains it. That is on purpose.**
+The H1 states the whole idea in eight words, so the markers land without the teaching
+section having run first. Do not "fix" it by moving Rhythm back above the menu: the
+offerings being high outranks the teaching order.
+
+### 1 · The rhythm is the structure, not a section
+
+Emma's master line was a heading on one section, so the page argued it once and forgot it.
+It is now the spine. **Four markers group the six service groups by where she is in the
+cycle**, and each card ends with one line saying where it sits.
+
+| Marker | What sits under it |
+|---|---|
+| Between visits, keeping it | Blow-dries · Treatment and Blow-dry |
+| Over time, repairing it | Treatment Courses |
+| Week four to five, the reset | The Tone Reset |
+| When you&rsquo;re changing it | Colour packages · Smoothing |
+
+**The service names are still the headings and the nav chips.** A woman scanning for
+*keratin* finds the word *keratin*; she does not have to reason about which stage of a
+cycle it belongs to. Rhythm is the spine, service names are the signposts.
+
+**The first marker is written so it holds for a woman who only ever books blow-dries**:
+*"If blow-dries are the only thing you book, this is your whole rhythm, and it runs
+weekly."* Without that line the device becomes a prescription that only fits blonde colour
+clients, which was the one thing it must not do.
+
+**The fourth marker is not called "the big visit"**, and this one is a correctness point
+rather than a style one. Emma puts *root colours* in the junior maintenance basket and
+*"your big colour"* with the experts, and both are true. Root colour is a junior
+appointment and the Root Revival ships without qualification. Full colour is not settled:
+the sign-off finding is that Motor City's pair do blow-dry, keratin and root colour rather
+than full colour, and two of the four cards do not list colour at all. A marker called
+*the big visit* reads as though juniors do the transformations. *When you're changing it*
+does not, and the honest branch line stays under the colour cards.
+
+**The blonde week 1 / 4-5 / 8 / 10 timeline stayed in the blonde section** rather than
+being lifted higher as the page's own diagram. It is a blonde-specific sequence (week one
+is a colour appointment), and hoisting it would have made the rhythm look like something
+only colour clients have. The four markers are the page's diagram instead, distributed
+rather than drawn once. **One line to change if Kate wants the timeline hoisted.**
+
+### 2 · The reframe band, and where the conflict was
+
+The action item wants *"These are already specialists"* capitalised near the top. That
+fights *"the offerings need to be way higher"*, and the fight is settled by making the
+reframe **a band rather than a section**: one capitalised line plus one supporting line,
+on black, directly under the hero and above the offer nav. It costs 205px on a phone.
+**The full Expertise section stays where it is, below the menu.**
+
+The brief hoped for 60 to 90px. That is not reachable with the sentence Emma dictated,
+which is four lines at 375. The padding is as tight as it goes.
+
+**The word *trainee* now appears exactly once on the page**, in that supporting line,
+because Emma dictated the sentence. It appears nowhere else. Swept and confirmed: no
+*still building*, *not there yet*, *on her way*, *working towards*, *learning*,
+*assistant*, *apprentice*.
+
+### 3 · The Expertise heading was the wrong way round, and now says JUNIOR STYLISTS
+
+Emma: *"The stylist, it needs to say junior stylist, and it needs to be bigger. It's the
+wrong way around."* So **JUNIOR STYLISTS. ALREADY SPECIALISTS.** is the h2, in capitals at
+50px, and *"Not trainees waiting to become something else"* dropped to the reframe band's
+supporting line. Caps read larger than sentence case, so the clamp is a step below the
+other h2s and still lands as the dominant heading.
+
+**The old framework banned the word *junior* in headings. Emma has overruled that twice.
+It is settled. Do not re-raise it.**
+
+### 3a · The proof points, and the counter-intuitive one
+
+A capitalised claim with nothing under it is a slogan, so four proof points sit under it.
+**None of them names a stylist**, and that is not an oversight: written name, photo and
+Instagram consent does not exist for any of the four, and the Notion register lists it as
+required before any paid spend. The reviews naming three of them is a different thing,
+because those are clients naming their own stylist.
+
+| On the page | Source |
+|---|---|
+| Fourteen years behind the chair, five of them here | The FINAL cards, name detached |
+| A named specialism each, four lists given generically | The FINAL cards |
+| Signed off by a named senior | Already on the page |
+| The same eight treatment categories | Already on the page |
+
+**The years figure is the strongest asset on the list, and it used to be the fault.** The
+Notion roster flagged fourteen years against a junior label as a contradiction, because the
+old concept claimed juniors had *fewer years behind the chair*. Under Emma's concept the
+same fact is the proof: fourteen years, in the column that does the maintenance work, is
+the best available answer to *"are they experienced enough?"*. The line that broke the old
+page is the evidence for this one. The card is explicit that junior describes the
+appointments she is booked for, not the length of her career, because the roster is
+explicit that it is not a measure of years.
+
+**No volume figure is printed.** Emma's own caption template reads *"[Stylist Name] has
+done over 400 blow-dries in the last six months"*. **400 is a placeholder and it is not on
+the page.** It is the single most persuasive proof point available and it needs somebody
+to pull the real number from Phorest. **Still open, and worth chasing.**
+
+### 4 · The menu: six groups, priced, feeling before facts
+
+Every group carries Emma's own three-part emotional map from Section 02 of her playbook:
+what she feels, what she needs to believe, how she feels leaving. Then the cards carry the
+facts. **Feeling before facts, never a service description first.** Each group also carries
+its pillar as a tag, so **Expertise · Rhythm · Wellness** are visible as the campaign rather
+than named once in a brief.
+
+Two lines are close to verbatim from her document because they do the selling on their own:
+*"By session three, the repair is visible"* on the courses, and on the colour packages, that
+she is not spending more, she is protecting what she already spends.
+
+**Six groups, not seven.** The action list splits *toners* from *toner + blow dry* and
+*root colours* from *colour packages*. In Emma's document there is one toner product, the
+Tone Reset, which **is** toner plus a blow-dry, and root colour is sold as the Root Revival
+inside the colour group. Her own spoken list was the six. So: six chips, the words *root
+colour* are inside the Root Revival card, and *toner* is in the toner group's heading, so
+nobody scanning for either misses it. **Seven chips is a one-line change if Kate says so.**
+
+**The 10-blow-dry package at 850 is off the page.** Emma asked for it removed or given a
+validity, and no validity exists. **No percentage ships**: her *(20% off)* and *(25% off)*
+are internal names and doctrine auto-fails `% off` in client copy.
+
+### 5 · Price visibility, and the one place the brief and the build disagreed
+
+Two rules pull against each other. Feeling before facts puts three paragraphs of emotional
+copy above the first card. Price visibility wants numbers early. Built as written, **the
+first price sat 1,400px below the top of the menu on a 375 screen**, which fails the brief
+it was written to satisfy.
+
+**The fix is an at-a-glance list at the top of the menu**: six rows, six prices, each row
+the anchor to its own group. Every price is now within 390px of the menu heading, the
+emotional copy keeps its position, and nothing changed about the order of the cards. It
+lives inside `#start`, so the rule that no price appears above the menu still holds.
+Verified: the only price token above `#start` is the hero's AED 175.
+
+**On the cards: the "from" price is always on the face, at 33px, never inside a
+disclosure.** Only the four-band breakdown collapses, and only where bands exist (the two
+blow-dry bundles and the Tone Reset). The treatments, the courses and the smoothing carry
+their full priced lists open on the face, because those are per-item prices rather than
+length bands.
+
+### 6 · More black
+
+Emma: *"it's too beige... looks too vanilla, and we don't like vanilla."* The page had one
+dark band, the FAQ. It now has five: **the reframe, Rhythm, Wellness, the Confidence
+Promise and the FAQ.** All use the existing `.dark` component, no new colours. The menu,
+the reviews, the awards and the form stay on light, because people compare prices and read
+proof on light and dense reading on black in daylight is a legibility problem.
+
+**In every dark section the body weight goes 300 to 400 and the body colour lifts to
+`rgba(255,255,255,.82)`**, because this page is mostly read on a phone outdoors.
+
+### 7 · The hero was misaligned, and it was not taste
+
+`.hero-b` was `padding:0` with a full-bleed `1fr 1fr` split while every other section
+rendered inside the centred `.wrap`. At 1920 the hero text started at the viewport edge and
+everything below started 388px in. Emma: *"it looks a bit wonky for a start, it's not in
+the middle."*
+
+**The split now sits in the same container as the rest of the page.** Measured at every
+width: the campaign label's left edge and the section content's left edge are the same
+number. 68 at 1280, 388 at 1920, 26 at 768, 20 at 375 and 390.
+
+**"The Junior Experience" is a campaign label now, not an eyebrow.** It was 12.5px fine
+print above a 52px headline; it is 16.5px on a phone and 22px on desktop.
+
+### 8 · Mobile, and it was not the last step
+
+Kate's ruling: the phone is the primary screen and every screen type has to work. Designed
+and checked at 375 and 390 first, then widened. **Verified at 375, 390, 414, 768, 1024,
+1280 and 1920**, on both copies:
+
+- No horizontal page scroll at any width. `document.documentElement.scrollWidth` never
+  exceeds the viewport.
+- Nothing clipped: no element inside `<main>` overflows its own box except the offer-nav
+  chip row, which is the intended horizontal scroller, and the native country-code select.
+- Every chip lands its group heading 19px clear of the 75px sticky nav. `scroll-margin-top`
+  is 94px on all six targets.
+- Every form control is 16px, which is also what stops iOS zooming on focus.
+- Every card CTA still prefills the form. All nine tested; `offering`, `branch`, `emirate`
+  and `campaign` still derive correctly.
+- The rail images are still `3/4` above 559px and `4/5` below. Untouched.
+- No console errors on either copy.
+
+### Three resolutions applied, from the brief
+
+**1 · Price-forward layout, never price-framed copy.** Emma said in the meeting that
+*people go to juniors because it's cheaper*. Her own SAY THIS / NOT THIS table bans that
+sentence, and Kate ruled it out of client-facing material. So the numbers are large and
+early and the words never say cheap, discount, save, or compare to senior pricing. Swept
+and confirmed clean. **The load-bearing sentence ships once, in Expertise and nowhere
+else:** they are as capable as anyone in the salon at the appointments they do, their
+columns are built with more room in them, so there is time to look at your hair properly
+before anything starts.
+
+Two deliberate departures from Kate's wording, both to keep it true. *"as capable at the
+appointments they do"* rather than flat parity, because the roster records that the cohort
+is not signed off on everything and an unqualified claim about named employees would be
+checkable and false. And *"columns are built with more room in them"* rather than *"not as
+fully booked"*, which is the same fact stated as the client's benefit rather than as a
+ranking of the stylist. **That second one is the mechanism Emma rejected in the first
+draft**, where being less booked was the junior's whole value. Here competence is the claim
+and time is the benefit. It is kept to one place on purpose. If Emma pushes back a second
+time, this is why.
+
+**2 · The single blow-dry price is not on the page.** Her document says *from AED 150*.
+Her own new grid prices three at 240 for Short, which is 80 each, and at her stated 20% off
+implies a Short single of 100. Publishing 150 beside 240 lets a client compute a 47%
+discount on a page where discount framing auto-fails. **The bundles ship, the single does
+not.** One line under the group says the salon will confirm the price for her length.
+**Emma confirms 100 and it is one line here.**
+
+**3 · No comparison with the senior team.** She said in the meeting that the juniors are
+better at blow-drying than our stylists. True in-house, and on a public page it puts the
+senior team down, which is her own rule against. **The page ships the non-comparative
+form**: they do more blow-dries than anyone else in the salon. Swept: the word *senior*
+appears on this page only as *signed off by a named senior*.
+
+### Emma's document was checked for newer changes before the menu was built
+
+Action item 10 asked her to refresh the shared link. `JUNIOR EMMA AUG 26 - edited.docx`
+was diffed again in full before any price was written. **Nothing is newer than the copy the
+brief quotes**: the blow-dry grid, the membership cap, the 10-pack question and the Tone
+Reset reprice are the same three Section 02 edits. **AED 130 still stands in nine places in
+her own document** and has to agree before the WhatsApp templates enter the Meta queue.
+
+### Two small copy corrections made in passing
+
+- **The In the chair heading said *"a proper look"***, which is the retired campaign name in
+  lowercase. It now reads *"Every appointment starts by looking at your hair properly."*
+- **The eyebrow numbering was stale** after the reorder. The numbers are gone rather than
+  renumbered, and the section eyebrows are words.
+- **The meta description still described the removed spine** (the hour, the water, the
+  written plan). Rewritten, in all three places it appears, plus the Service `serviceType`.
+
+### The two copies had drifted, and the drift was the whole concept
+
+`tara-rose-pages-main/junior-experience/index.html` was **still on the retired concept**:
+*"Nobody will be watching the clock"*, the AED 300 hour in the hero and in four schema
+nodes, a FAQ about how a full column is booked to the minute, and the *"Less booked, not
+less careful"* answer. The 25 Aug rebuild landed in the standalone repo and never got
+ported. **Both copies are now generated from the standalone by one script**, so this cannot
+drift silently again: the tree copy differs only in the `/tara-rose-pages` prefix, the
+inlined JS and build.py's CSS carrier.
+
+Verified: **3,331 words of visible copy, identical in both**, every meta tag identical,
+`python build.py --check` reports 85/85 pages matching, and the tree copy renders to the
+same measurements at 375 and 1280.
+
+### Still open after this pass
+
+- **The single blow-dry price**, and the **length bands for colour**. Neither is invented.
+- **The real blow-dry volume figure per stylist**, from Phorest. Emma's own template wants
+  it and it is the strongest proof point available.
+- **Is there a standalone toner**, without a blow-dry? The meeting notes list it separately;
+  her document has only the Tone Reset, which includes the blow-dry. No price exists for a
+  standalone anywhere. **Ask before adding a seventh group.**
+- **What the page says about the campaign ending.** The *"not an introductory rate"* line
+  went with the old concept and nothing replaced it, so the page has no answer to *"will it
+  go up?"* — which the framework calls the quiet killer of the in-chair rebook.
+- **One WhatsApp number is serving all four branches.**
+- **`trs-brand-guardian` has not seen any of the new copy**, and this pass is almost
+  entirely new client-facing copy.
+- **Nobody has confirmed the four review clients consented** to appear on a public page.
+- **Written name, photo and Instagram consent for the four stylists** is still required
+  before any paid spend, which is why the proof points carry no names.
+
+### Settled, do not reopen
+
+- **Tara's five-layer framework no longer drives this page.** Kate's call, 25 Aug: follow
+  Emma, handle Tara's revisions if and when she gives them. The unhurried hour, the senior
+  column booked to the minute and the AED 300 diagnostic hour are gone from both copies.
+- **The word *junior* in headings.** Overruled twice by Emma. It is the campaign name.
+- **The five step labels stay First / Then / After that / Next / Last, with no digits.** A
+  numbered five beside the 8-Step Hair Plan re-creates the retired 5-Step Consultation.
+- **The Confidence Promise wording, the four reviews, the photographs and the tracking
+  vocabulary are untouched.** So is `noindex,nofollow`.
+
+---
+
 ## Four reviews, one per junior stylist, 25 Aug 2026
 
 Kate asked for more, and suggested the Google Business Profile. **GBP would not give up its

@@ -12,14 +12,23 @@
 .hero-b{ background:var(--paper); padding:0; overflow:hidden; }
 .hero-b .split{
   display:grid; grid-template-columns:1fr 1fr; align-items:stretch;
+  gap:clamp(20px,3.4vw,48px);
   min-height:min(78vh,720px);
+  max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad-x);
 }
 .hero-b .htext{
   display:flex; flex-direction:column; justify-content:center;
-  padding:clamp(28px,5vw,64px) clamp(20px,4vw,56px);
+  padding:clamp(28px,5vw,56px) 0;
   max-width:none;
 }
-.hero-b .eyebrow{ display:block; margin-bottom:16px; }
+/* The campaign label, not an eyebrow. Emma, 25 Aug: "Junior experience needs to be
+   bigger." It was 12.5px fine print above a 52px headline. */
+.hero-b .campaign-label{
+  display:block; margin-bottom:16px;
+  font-family:var(--fb); font-weight:600; text-transform:uppercase;
+  font-size:clamp(16.5px,4.4vw,22px); letter-spacing:.2em; line-height:1.2;
+  color:var(--accent-text);
+}
 .hero-b .h-1{
   font-family:var(--fd); font-weight:400; color:var(--ink);
   font-size:clamp(30px, min(4.6vw, 5.6vh), 52px);
@@ -40,10 +49,10 @@
 .hero-b .cta-row{ margin-top:28px; }
 .hero-b .himg{
   background:var(--stone-soft) center/cover no-repeat;
-  min-height:340px;
+  min-height:340px; border-radius:var(--r-md);
 }
 @media(max-width:833px){
-  .hero-b .split{ grid-template-columns:1fr; min-height:0; }
+  .hero-b .split{ grid-template-columns:1fr; min-height:0; gap:0; }
   /* The image stays above the text below the split, but it is a band, not a panel.
      Height is capped against the VIEWPORT, not derived from the width: an
      aspect-ratio plus max-height shrinks the width instead of the height and
@@ -52,7 +61,7 @@
      requirement in Layer 5 E. */
   .hero-b .himg{
     order:-1; width:100%; min-height:0;
-    height:clamp(140px, 24vh, 240px); aspect-ratio:auto;
+    height:clamp(150px, 26vh, 250px); aspect-ratio:auto; margin-top:20px;
   }
   .hero-b .htext{ padding-top:22px; }
   .hero-b .lede{ font-size:16px; }
@@ -220,3 +229,262 @@
 .reserve .consent{ font-size:14px; }
 .trs-nav .nav-link{ font-size:12.5px; }
 .tcard .stars{ font-size:14px; }
+
+
+/* =====================================================================
+   PASS 2, 25 Aug 2026. Emma's review: the reframe band, the offer nav, the
+   menu grouped by rhythm marker, the proof grid and more black.
+   ===================================================================== */
+
+/* ---------------------------------------------------------- THE REFRAME BAND
+   Sits directly under the hero and above the offer nav, so it is the first thing
+   read after the headline and it costs the offerings almost no vertical space.
+   One capitalised line plus one supporting line. No CTA, no image, no third line. */
+.reframe{ padding:clamp(26px,4vw,44px) 0; }
+.reframe__claim{
+  margin:0; text-align:center; color:#fff;
+  font-family:var(--fd); font-weight:500; text-transform:uppercase;
+  font-size:clamp(19px,3.6vw,34px); line-height:1.14; letter-spacing:.08em;
+  text-wrap:balance;
+}
+.reframe__sub{
+  margin:14px auto 0; max-width:62ch; text-align:center;
+  font-family:var(--fb); font-size:clamp(15px,1.5vw,16.5px); font-weight:400;
+  line-height:1.6; color:rgba(255,255,255,.82);
+}
+
+/* -------------------------------------------------------------- THE OFFER NAV
+   Emma: "the offerings need to be way higher" and "if you click on it, it scrolls
+   down to where it is". Horizontal scroll chips on a phone, never a wrapped grid. */
+.offer-nav{
+  background:var(--cream); border-bottom:1px solid var(--hair);
+  padding:16px 0; position:relative; z-index:1;
+}
+.offer-nav .wrap{ display:flex; align-items:center; gap:18px; }
+.offer-nav__lbl{
+  flex:0 0 auto; font-family:var(--fb); font-size:11.5px; font-weight:600;
+  letter-spacing:.24em; text-transform:uppercase; color:var(--ink-soft);
+}
+.offer-nav__row{
+  display:flex; gap:9px; list-style:none; margin:0; padding:0;
+  overflow-x:auto; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none; -ms-overflow-style:none;
+}
+.offer-nav__row::-webkit-scrollbar{ display:none; }
+.offer-nav__row li{ flex:0 0 auto; }
+.ochip{
+  display:inline-flex; align-items:center; min-height:44px; padding:0 18px;
+  border-radius:var(--r-pill); background:var(--paper); border:1px solid var(--hair);
+  font-family:var(--fb); font-size:12.5px; font-weight:600; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--ink); white-space:nowrap; text-decoration:none;
+  transition:border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.ochip:hover, .ochip:focus-visible{ border-color:var(--accent-deep); color:var(--accent-text); }
+@media(max-width:899px){
+  .offer-nav .wrap{ display:block; padding-inline:0; }
+  .offer-nav__lbl{ display:block; padding-inline:var(--pad-x); margin-bottom:11px; }
+  .offer-nav__row{ padding-inline:var(--pad-x); }
+}
+
+/* ------------------------------------------------------- THE RHYTHM MARKERS
+   The organising device. Each marker is the eyebrow above one or two service
+   groups, never a replacement for the service name: a woman scanning for
+   "keratin" has to find the word keratin, not reason about a stage of a cycle. */
+.rband{
+  max-width:60ch; margin:64px auto 0; text-align:center;
+  padding-top:30px; border-top:1px solid var(--hair);
+}
+.mgroup + .rband{ margin-top:70px; }
+.rband__eyebrow{
+  display:block; font-family:var(--fb); font-size:11.5px; font-weight:600;
+  letter-spacing:.26em; text-transform:uppercase; color:var(--accent-text);
+  margin-bottom:12px;
+}
+.rband__h{
+  margin:0; font-family:var(--fd); font-style:italic; font-weight:500;
+  font-size:clamp(24px,3.2vw,34px); line-height:1.16; color:var(--ink);
+}
+.rband__p{
+  margin:12px auto 0; max-width:56ch;
+  font-family:var(--fb); font-size:16px; font-weight:300; line-height:1.62;
+  color:var(--ink-soft);
+}
+
+/* --------------------------------------------------------------- THE GROUPS */
+.mgroup{ scroll-margin-top:94px; margin-top:40px; }
+.mintro{ max-width:62ch; margin:0 auto; text-align:center; }
+.pillar{
+  display:inline-block; margin-bottom:14px; padding:6px 14px;
+  border-radius:var(--r-pill); background:var(--stone-soft); border:1px solid var(--hair);
+  font-family:var(--fb); font-size:11px; font-weight:600; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--ink-soft);
+}
+.mgroup .menu-head{ margin:0; }
+.mline{
+  margin:12px auto 0; max-width:24ch;
+  font-family:var(--fd); font-style:italic; font-weight:500;
+  font-size:clamp(20px,2.6vw,27px); line-height:1.24; color:var(--ink);
+}
+.mfeel, .mbelief{
+  margin:16px auto 0; max-width:58ch;
+  font-family:var(--fb); font-size:16px; font-weight:300; line-height:1.65; color:var(--ink-soft);
+}
+.mbelief{ color:var(--ink); }
+.mleave{
+  margin:18px auto 0; max-width:56ch;
+  font-family:var(--fb); font-size:15.5px; font-weight:300; line-height:1.6; color:var(--ink-soft);
+}
+.mleave span{
+  display:block; margin-bottom:6px;
+  font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--accent-text);
+}
+.mgroup .doors{ margin-top:30px; }
+.mgroup .menu-note{ margin-top:22px; }
+
+/* The Tone Reset carries the campaign's whole argument, so it gets the most space. */
+.mgroup--feature{
+  background:var(--stone-soft); border:1px solid var(--hair); border-radius:var(--r-md);
+  padding:clamp(24px,4vw,44px) clamp(20px,3vw,36px);
+}
+.mgroup--feature .doors{ grid-template-columns:minmax(0,640px); justify-content:center; }
+.mgroup--feature .door{ background:var(--paper); }
+
+/* --------------------------------------------------------------- THE CARDS
+   Feeling before facts, and the "from" price stays on the face of the card at all
+   times. Only the four-band breakdown collapses: a card whose price you cannot see
+   without tapping has failed the brief. */
+.door__inc{ list-style:none; margin:16px 0 0; padding:0; display:grid; gap:9px; }
+.door__inc li{
+  display:flex; gap:11px; align-items:flex-start;
+  font-family:var(--fb); font-size:14.5px; font-weight:300; line-height:1.5; color:var(--ink);
+}
+.door__inc li .tk{ flex:0 0 13px; width:13px; height:2px; background:var(--accent-deep); margin-top:10px; }
+.plist{ list-style:none; margin:18px 0 0; padding:0; display:grid; gap:0; }
+.plist li{
+  display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+  padding:9px 0; border-bottom:1px solid var(--hair);
+  font-family:var(--fb); font-size:15px; font-weight:300; color:var(--ink-soft);
+}
+.plist li:first-child{ border-top:1px solid var(--hair); }
+.plist li b{
+  font-weight:500; color:var(--ink); white-space:nowrap; font-variant-numeric:tabular-nums;
+}
+.door .from{ margin-top:auto; padding-top:22px; }
+.door .from b{ font-size:clamp(28px,3.2vw,33px); }
+.bands{ margin-top:14px; border-top:1px solid var(--hair); }
+.bands > summary{
+  display:flex; align-items:center; min-height:44px; cursor:pointer; list-style:none;
+  font-family:var(--fb); font-size:12.5px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--accent-text);
+}
+.bands > summary::-webkit-details-marker{ display:none; }
+.bands > summary::after{ content:"\203A"; margin-left:9px; transform:rotate(90deg); transition:transform var(--dur) var(--ease); }
+.bands[open] > summary::after{ transform:rotate(-90deg); }
+.bands ul{ list-style:none; margin:0 0 14px; padding:0; display:grid; gap:0; }
+.bands li{
+  display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+  padding:8px 0; border-top:1px solid var(--hair);
+  font-family:var(--fb); font-size:14.5px; font-weight:300; color:var(--ink-soft);
+}
+.bands li b{ font-weight:500; color:var(--ink); white-space:nowrap; font-variant-numeric:tabular-nums; }
+.door__where{
+  margin:20px 0 0; padding-top:16px; border-top:1px solid var(--hair);
+  font-family:var(--fb); font-size:14.5px; font-weight:300; line-height:1.55; color:var(--ink-soft);
+}
+.door__where span{
+  display:block; margin-bottom:5px;
+  font-size:10.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--accent-text);
+}
+
+/* -------------------------------------------------------------- THE PROSE BLOCK
+   Replaces five copies of the same inline style. On a dark ground the weight goes
+   to 400 and the body colour lifts, because this page is read on a phone outdoors. */
+.prose{ max-width:62ch; margin:0 auto; }
+.prose p{
+  margin:0 0 22px; font-family:var(--fb); font-size:17px; font-weight:300;
+  line-height:1.7; color:var(--ink-soft);
+}
+.prose p:last-child{ margin-bottom:0; }
+.prose .prose__anchor{
+  font-family:var(--fd); font-style:italic; font-size:22px; line-height:1.4; color:var(--ink);
+}
+.prose .prose__last{ color:var(--ink); }
+.dark .prose p{ font-weight:400; color:rgba(255,255,255,.82); }
+.dark .prose .prose__anchor,
+.dark .prose .prose__last{ color:#fff; font-weight:400; }
+.dark .stack-anchor{ color:rgba(255,255,255,.82); font-weight:400; }
+.dark .faq .ans, .dark .avail{ font-weight:400; }
+
+/* --------------------------------------------------------------- CAPS HEADING
+   Emma: "it needs to say junior stylist, and it needs to be bigger... in capitals."
+   Caps read larger than sentence case at the same size, so the clamp is a step down
+   from .sec-head h2 and still lands as the dominant heading on the page. */
+.h2-caps{
+  text-transform:uppercase; letter-spacing:.005em;
+  font-size:clamp(28px,4.4vw,50px) !important; line-height:1.06;
+}
+.proof.grid-2{ gap:18px; }
+.proof .inc h3{ font-size:21px; }
+.proof .inc p{ margin:10px 0 0; font-family:var(--fb); font-size:15.5px; font-weight:300; line-height:1.6; color:var(--ink-soft); }
+
+/* ------------------------------------------------------- THE PROMISE, on black
+   Same words, locked. Only the ground changed. */
+.promise-band{ padding:52px 0; scroll-margin-top:94px; }
+.promise-band__lbl{
+  margin:0 0 16px; font-family:var(--fb); font-size:11.5px; font-weight:600;
+  letter-spacing:.26em; text-transform:uppercase; color:var(--accent);
+}
+.promise-band__body{
+  margin:0 auto; max-width:52ch;
+  font-family:var(--fd); font-style:italic; font-size:clamp(20px,3vw,26px);
+  line-height:1.4; color:#fff;
+}
+
+/* ------------------------------------------------------------------- MOBILE
+   The phone is the primary screen. Checked at 375 and 390 first, then widened. */
+@media(max-width:640px){
+  .rband{ margin-top:48px; padding-top:26px; }
+  .mgroup + .rband{ margin-top:52px; }
+  .mgroup{ margin-top:30px; }
+  .mgroup .doors{ margin-top:24px; }
+  .door{ padding:22px 20px 20px; }
+  .mgroup--feature{ padding:22px 16px; }
+  .plist li, .bands li{ font-size:14.5px; }
+  .menu-note, .doors-unsure{ font-size:15px; }
+}
+
+
+/* ------------------------------------------------------------ AT A GLANCE
+   Emma: "price visibility increased throughout." The group intros put feeling
+   before facts, which is right, but on a phone that left 1,400px of reading
+   between the top of the menu and the first number. Every price now sits within
+   one screen of the menu heading, and each row is the anchor to its own group.
+   It lives INSIDE #start, so the no-price-above-the-menu rule still holds. */
+.glance{
+  list-style:none; margin:34px auto 0; padding:0;
+  max-width:760px; border-top:1px solid var(--hair);
+}
+.glance a{
+  display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between;
+  gap:6px 18px; min-height:56px; padding:14px 0;
+  border-bottom:1px solid var(--hair); text-decoration:none; color:var(--ink);
+  transition:color var(--dur) var(--ease);
+}
+.glance a:hover{ color:var(--accent-text); }
+.glance__n{
+  font-family:var(--fd); font-weight:500; font-size:clamp(17px,2vw,20px); line-height:1.24;
+}
+.glance__p{
+  font-family:var(--fb); font-size:12px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-soft); white-space:nowrap;
+}
+.glance__p b{
+  font-family:var(--fd); font-weight:500; font-size:20px; letter-spacing:0;
+  text-transform:none; color:var(--ink); font-variant-numeric:tabular-nums;
+  margin-left:6px;
+}
+@media(max-width:520px){
+  .glance a{ display:grid; grid-template-columns:1fr; gap:5px; }
+  .glance__p{ white-space:normal; }
+}
