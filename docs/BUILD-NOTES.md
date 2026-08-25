@@ -1,39 +1,51 @@
 # The Junior Experience, build notes
 
-## Photography, 25 Aug 2026: the rail was the voucher campaign's photography
+## Photography, 25 Aug 2026: the rail was the voucher campaign's photography, and then it was the wrong stylists
 
-Kate spotted it on the live page. **The three photographs in the `#hour` rail were the same
-three files the Wellness Voucher pack ships**, byte for byte: `exp-authentic.jpg`,
-`exp-colour.jpg` and `exp-people.jpg` all sit in `wellness-voucher-approval-pack/assets/`.
-Two campaigns to the same client list, running six weeks apart, on the same pictures.
+Two faults, found in that order, both by Kate on the live page.
 
-**Replaced from Tara's and Marish's libraries.** Sampled 15 frames from
-*TARA FOUND IMAGES > CONSULTATIONS:INTERACTION* and *JUNIOR STYLIST* (tara@), and 21 from
-*stylists working images* (marish@). Marish's folder is the better match: it is the shoot
-where stylists are working rather than posing. Every candidate was checked against a contact
-sheet of all sixteen voucher-pack images first, so nothing here repeats.
+**One. The three rail photographs were the Wellness Voucher pack's**, byte for byte:
+`exp-authentic.jpg`, `exp-colour.jpg` and `exp-people.jpg` all ship in
+`wellness-voucher-approval-pack/assets/`. Two campaigns to the same client list, six weeks
+apart, on the same pictures.
 
-| Slot | New file | Source | Why |
+**Two, and this is the one that mattered. The replacements did not show junior stylists.**
+A page about the junior team was illustrated with senior and front-of-house staff. The
+photography brief in the framework never said it, because nobody thought it needed saying,
+and it is the whole point of the page: **the woman in the picture has to be one of the ten**.
+
+**Where the junior team actually is photographed.** Not in the dashboard's `assets/staff/work/`
+set, which is `may-*`, `irlyn-*`, `eds-*` and `areanne-*` but is photographs of their *work*,
+finished hair shot from behind, at 300px with a mint border baked in. The real sources are
+Tara's `TARA FOUND IMAGES > JUNIOR STYLIST` folder, four frames, and the frames inside
+Marish's `stylists working images` where the junior team is the one working.
+
+| Slot | File | Source | Who and what |
 |---|---|---|---|
-| She listens first | `consult-listens.jpg` | `BRIT9396` (marish@) | Two women seated, mid-conversation, the hair plan on her lap. The appointment before anything is touched |
-| Then she looks properly | `consult-looks.jpg` | `BRIT0317` (marish@) | Hands in dry, ungowned hair, client watching. This is the examination shot the framework's hero brief asks for, and the rail is where it belongs |
-| Then she explains it | `consult-explains.jpg` | `BRIT6035` (marish@) | The stylist talking, with the *We see you beyond the hair* card in frame. In-frame copy, and it happens to agree with the page footer |
+| She listens first | `consult-listens.jpg` | `BRIT1220` (marish@) | A junior stylist and her client at the chair, gloved and ready, both talking. The moment before anything starts |
+| Then she looks properly | `consult-looks.jpg` | `BRIT4993` (marish@) | Both hands lifting the client's hair, checking it, client smiling. This is the examination, exactly as the section describes it |
+| Then she explains it | `consult-explains.jpg` | `BRIT6639` (tara@, JUNIOR STYLIST) | **Irlyn**, name badge legible in frame, showing her client the treatment pot and tube. She is Khalifa City's junior stylist, so the provenance is not an assumption |
 
-**The crops were composed for the mobile band, not the desktop card.** `.hour-rail img` is
+**Rejected on the way, and worth writing down.** `BRIT0317` and `BRIT6035`, the first
+replacements, are good photographs of the wrong people. `CLIENT_INTERACTION10` has a male
+client, and this is a ladies salon. `BRIT6439` has a male stylist, and the junior cohort is
+ten women.
+
+**The crops are composed for the phone, not the desktop card.** `.hour-rail img` is
 `aspect-ratio:3/4` above 559px and **`16/10` below it**, with `object-fit:cover`, so a phone
-shows only the middle 42% of the height of each 546x820 file. The first pass was cropped for
-desktop and beheaded two of the three on mobile. Final geometry, all from full-resolution
-originals at 3x the needed size: listens full height at cx 0.52, looks 90% height from the
-top at cx 0.58, explains 78% height at cx 0.68. Checked at both ratios before shipping.
+shows only the middle 42% of the height of each 546x820 file. An earlier pass was cropped for
+desktop and beheaded two of the three on mobile. Final geometry, all full height from
+originals at 6720px or 5783px wide, so roughly 3x the pixels needed: listens at cx 0.32,
+looks at cx 0.55, explains at cx 0.40. Every one checked at both ratios before shipping.
 
-**Four files deleted from this repo:** the three above plus `exp-floor.jpg`, unused since the
-hero changed. They stay in the page tree, where the Bahrain founding page and the beauty
-voucher page still use them. **This supersedes the Photography section further down**, which
-asked for `1.png`, `BRIT6639.jpg` and `10.png`; those were named before either library had
-been looked at properly, and `BRIT9396`/`0317`/`6035` are the better three.
+**Four files deleted from this repo:** the three reused ones plus `exp-floor.jpg`, unused
+since the hero changed. They stay in the page tree, where the Bahrain founding page and the
+beauty voucher page still use them. **This supersedes the Photography section further down**,
+which asked for `1.png`, `BRIT6639.jpg` and `10.png`. It was half right: `BRIT6639` is in.
 
-**Still open:** the hero and the founder portrait are untouched, and the OG image at
-`/og/junior-experience.jpg` still does not exist, so every share renders blank.
+**Still open:** the hero is still `hero-mapping.jpg` and does not show a junior stylist
+either, the founder portrait is untouched, and the OG image at `/og/junior-experience.jpg`
+still does not exist, so every share renders blank.
 
 ---
 
