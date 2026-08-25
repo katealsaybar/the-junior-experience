@@ -317,11 +317,14 @@ body{ overflow-x:clip; }
 /* --------------------------------------------------------------- THE GROUPS */
 .mgroup{ scroll-margin-top:var(--sticky-h,156px); margin-top:40px; }
 .mintro{ max-width:62ch; margin:0 auto; text-align:center; }
+/* Emma circled this tag: "the black will help to tell a story of the where are you
+   vibe." It goes ink, matching the marker bands, so the pillar layer reads as part
+   of the same black story rather than as fine print. */
 .pillar{
-  display:inline-block; margin-bottom:14px; padding:6px 14px;
-  border-radius:var(--r-pill); background:var(--stone-soft); border:1px solid var(--hair);
-  font-family:var(--fb); font-size:11px; font-weight:600; letter-spacing:.2em;
-  text-transform:uppercase; color:var(--ink-soft);
+  display:inline-block; margin-bottom:14px; padding:7px 16px;
+  border-radius:var(--r-pill); background:var(--ink-deep);
+  font-family:var(--fb); font-size:11.5px; font-weight:600; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent);
 }
 .mgroup .menu-head{ margin:0; font-weight:700; font-size:clamp(24px,3.2vw,31px); }
 .mline{
