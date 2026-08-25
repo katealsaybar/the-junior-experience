@@ -328,22 +328,25 @@ body{ overflow-x:clip; }
 }
 .mgroup .menu-head{ margin:0; font-weight:700; font-size:clamp(24px,3.2vw,31px); }
 .mline{
-  margin:12px auto 0; max-width:24ch;
+  margin:14px auto 0; max-width:24ch;
   font-family:var(--fd); font-style:italic; font-weight:500;
   font-size:clamp(20px,2.6vw,27px); line-height:1.24; color:var(--ink);
 }
+/* Kate, 25 Aug: the intro block read too small and too tight. One size up, wider
+   gaps, and HOW YOU LEAVE gets a hairline and real space so it reads as its own
+   beat rather than a caption stuck to the paragraph above. */
 .mfeel, .mbelief{
-  margin:16px auto 0; max-width:58ch;
-  font-family:var(--fb); font-size:16px; font-weight:300; line-height:1.65; color:var(--ink-soft);
+  margin:22px auto 0; max-width:58ch;
+  font-family:var(--fb); font-size:16.5px; font-weight:300; line-height:1.7; color:var(--ink-soft);
 }
 .mbelief{ color:var(--ink); }
 .mleave{
-  margin:18px auto 0; max-width:56ch;
-  font-family:var(--fb); font-size:15.5px; font-weight:300; line-height:1.6; color:var(--ink-soft);
+  margin:30px auto 0; max-width:56ch; padding-top:22px; border-top:1px solid var(--hair);
+  font-family:var(--fb); font-size:16.5px; font-weight:300; line-height:1.65; color:var(--ink);
 }
 .mleave span{
-  display:block; margin-bottom:6px;
-  font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  display:block; margin-bottom:9px;
+  font-size:12px; font-weight:600; letter-spacing:.26em; text-transform:uppercase;
   color:var(--accent-text);
 }
 .mgroup .doors{ margin-top:30px; }
