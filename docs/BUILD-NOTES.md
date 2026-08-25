@@ -1,5 +1,83 @@
 # The Junior Experience, build notes
 
+## Emma's live review round, 25 Aug 2026 afternoon: the pillars go up top and the page gets its bold
+
+Emma reviewed the pass-2 draft live on WhatsApp within the hour. Eight instructions, all
+applied, plus Kate's sticky menu bar. This partially reorders pass 2, and where the two
+conflict, this round wins because it is later and it is hers.
+
+**1 · The hero support lines are gone.** She circled *"THE TONE RESET FROM AED 175 / ALL
+FOUR SALONS"* under the hero CTA: *needs removing*. So the only price token left above the
+menu is none at all; the hero is the headline, the lede and the button.
+
+**2 · The three pillars now open the page.** *"I want the three things I showed you of my
+doc right at the top: the expertise, the rhythm, the wellness."* Expertise, Rhythm and
+Wellness moved from below the menu to directly under the reframe band, in that order.
+**This deliberately reverses the meeting's "offerings way higher"**; her later instruction
+wins. Rhythm and Wellness are both dark and now adjacent, separated by a hairline.
+
+**3 · The at-a-glance price list is deleted.** Her words: *"actually delete, they are
+explained below, extra text we don't need."* It was pass 2's own answer to price-distance
+on a phone; she would rather the cards carry it alone.
+
+**4 · Everything she circled is bolder, on a real Playfair Display 700.** The estate only
+carried the 500 weight, so *bolder* meant synthetic faux-bold or a new face. The latin 700
+woff2 now ships in both asset folders at 23KB, the same budget as the 500, and the
+`fonts.css` preamble regenerates into the page tree via `port.py` rather than being carried
+forward stale. Card titles are upright 700 (they were italic 500), group titles 700 at up
+to 31px, and the marker headings 700 at up to 40px.
+
+**5 · The rhythm markers are black section bands.** *"These titles need to be bigger,
+there's so much text, we need it to be sections almost"* and *"the black will help to tell
+a story of the where-are-you vibe."* The four WHERE YOU ARE markers are now full-bleed
+`--ink-deep` bands inside the menu, eyebrow in the bright accent, heading white 700.
+The 100vw pull overshoots by half a scrollbar on desktop, so `body` moves from the core
+sheet's `overflow-x:hidden` to `clip`, which kills the 8px of programmatic horizontal
+scroll hidden still allows. **On `html` the same clip breaks position:sticky; it must stay
+on body.** Tested both ways.
+
+**6 · The blonde story moved into the menu, at the top of the colour part.** *"This is
+good, it needs to go higher, at the top of the colour part maybe."* It sits after the Tone
+Reset it sells and before the WHEN YOU'RE CHANGING IT marker, as a full-bleed cream band.
+
+**7 · The jump-to chips: bolder, all visible, no sliding.** *"Needs to be bolder and not
+slide across, all shown."* The row wraps instead of scrolling: two centred rows on a phone,
+one on desktop. Chips carry a 1.5px ink border and invert on hover. On mobile the JUMP TO
+label gives its line back to the chips, because two rows are already 96px of chrome.
+
+**8 · May's fourteen years is off the page.** Kate asked Emma directly; Emma: *"Yeah xx...
+unless we write about her."* No written consent exists to write about her, so the proof
+grid is three cards: the named specialisms, the named-senior sign-off, the eight
+categories. **The strongest proof point on the page is parked until the consent question
+is settled**, and the build notes entry below (pass 2, section 3a) records why it was ever
+here.
+
+**Plus Kate's call: the menu bar is sticky, both directions.** A `.menu-zone` wrapper
+around the bar and `#start` makes it the sticky containing block: the bar sits in its slot
+above the menu at the top of the page, docks under the brand nav for as long as the menu
+lasts, and scrolls away with it rather than following her into the form. `--nav-h` and
+`--sticky-h` are measured in `js/nav-scroll.js` (on load, resize and after the webfont
+swaps, since the chip rows reflow) so every anchor lands its heading exactly 16px clear of
+the docked bar, at every width, including the two-row mobile bar.
+
+**Verified at 375, 390, 414, 768, 1280 and 1920, both copies:** no horizontal scroll
+(including the forced-scroll probe), no clipped content, every chip landing 16px clear,
+the real 700 confirmed loaded via `document.fonts.check`, no console errors, copy
+word-identical between the copies (3,244 words), `build.py --check` 85/85.
+
+**Note for the environment, not the page:** the preview pane stops compositing when
+hidden, so scroll and resize events never fire there. The `.stuck` shadow and re-measure
+were verified by direct invocation; the mechanism is the same handler pattern as the nav
+shadow that has been live for weeks.
+
+**Still open, unchanged from pass 2:** the single blow-dry price, the colour length bands,
+the standalone-toner question, the campaign close date, the Phorest volume figure, review
+client consent, and the brand-guardian gate on all of this copy. **New from this round:**
+if Emma wants May written about by name, that is the consent form first, then one proof
+card back.
+
+---
+
 ## Pass 2 on Emma's review, 25 Aug 2026: the menu is the page now
 
 Ten action items came out of the 25 Aug meeting. All ten are on the page. The shape

@@ -39,13 +39,6 @@
   font-family:var(--fb); font-size:clamp(16px,1.2vw,18.5px); font-weight:300;
   line-height:1.62; color:var(--ink-soft);
 }
-.hero-b .support{
-  display:flex; flex-wrap:wrap; gap:8px 18px; margin:22px 0 0; padding:0; list-style:none;
-}
-.hero-b .support li{
-  font-size:12.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--ink-soft);
-}
 .hero-b .cta-row{ margin-top:28px; }
 .hero-b .himg{
   background:var(--stone-soft) center/cover no-repeat;
@@ -65,12 +58,7 @@
   }
   .hero-b .htext{ padding-top:22px; }
   .hero-b .lede{ font-size:16px; }
-  /* On a phone the support chips sit under the pill, not above it. That is 56px
-     of vertical budget, and it is the difference between the CTA landing at 702
-     and at 646 on a 375x667 screen. */
-  .hero-b .htext{ display:flex; flex-direction:column; }
-  .hero-b .cta-row{ order:1; margin-top:20px; }
-  .hero-b .support{ order:2; margin-top:18px; gap:6px 14px; }
+  .hero-b .cta-row{ margin-top:20px; }
 }
 
 /* ------------------------------------------------- THE THREE ENTRY POINTS (#start)
@@ -88,8 +76,8 @@
   box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 14px 34px -24px rgba(45,46,55,.32);
 }
 .door h3{
-  font-family:var(--fd); font-style:italic; font-weight:500;
-  font-size:clamp(19px,1.7vw,23px); line-height:1.26; color:var(--ink); margin:0;
+  font-family:var(--fd); font-weight:700;
+  font-size:clamp(20px,1.9vw,24px); line-height:1.22; color:var(--ink); margin:0;
 }
 .door p{
   margin:14px 0 0; font-family:var(--fb); font-size:15.5px; font-weight:300;
@@ -256,62 +244,78 @@
 /* -------------------------------------------------------------- THE OFFER NAV
    Emma: "the offerings need to be way higher" and "if you click on it, it scrolls
    down to where it is". Horizontal scroll chips on a phone, never a wrapped grid. */
+/* Sticky, and only for as long as the menu lasts. `.menu-zone` wraps this bar and
+   #start, so it is the sticky containing block: the bar docks under the brand nav on
+   the way down, drops back into the flow at the top, and scrolls away with the menu
+   rather than following her into the form and the FAQ. Kate, 25 Aug. */
+.menu-zone{ position:relative; }
+.offer-nav__sentinel{ height:0; }
 .offer-nav{
   background:var(--cream); border-bottom:1px solid var(--hair);
-  padding:16px 0; position:relative; z-index:1;
+  padding:10px 0; position:sticky; top:var(--nav-h,75px); z-index:50;
+  transition:box-shadow .28s var(--ease);
 }
-.offer-nav .wrap{ display:flex; align-items:center; gap:18px; }
+.offer-nav.stuck{ box-shadow:0 14px 28px -22px rgba(45,46,55,.55); }
+@media(prefers-reduced-motion:reduce){ .offer-nav{ transition:none; } }
+/* Every chip visible, no horizontal slide, and bolder. Emma, 25 Aug: "needs to be
+   bolder and not slide across, all shown." The row wraps instead of scrolling, so on
+   a phone the six chips sit in two centred rows. */
+.offer-nav .wrap{ display:flex; align-items:center; justify-content:center; gap:14px; }
 .offer-nav__lbl{
   flex:0 0 auto; font-family:var(--fb); font-size:11.5px; font-weight:600;
   letter-spacing:.24em; text-transform:uppercase; color:var(--ink-soft);
 }
 .offer-nav__row{
-  display:flex; gap:9px; list-style:none; margin:0; padding:0;
-  overflow-x:auto; -webkit-overflow-scrolling:touch;
-  scrollbar-width:none; -ms-overflow-style:none;
+  display:flex; flex-wrap:wrap; justify-content:center; gap:8px;
+  list-style:none; margin:0; padding:0;
 }
-.offer-nav__row::-webkit-scrollbar{ display:none; }
-.offer-nav__row li{ flex:0 0 auto; }
 .ochip{
   display:inline-flex; align-items:center; min-height:44px; padding:0 18px;
-  border-radius:var(--r-pill); background:var(--paper); border:1px solid var(--hair);
-  font-family:var(--fb); font-size:12.5px; font-weight:600; letter-spacing:.12em;
+  border-radius:var(--r-pill); background:var(--paper); border:1.5px solid var(--ink);
+  font-family:var(--fb); font-size:12.5px; font-weight:600; letter-spacing:.1em;
   text-transform:uppercase; color:var(--ink); white-space:nowrap; text-decoration:none;
-  transition:border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  transition:background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
-.ochip:hover, .ochip:focus-visible{ border-color:var(--accent-deep); color:var(--accent-text); }
-@media(max-width:899px){
-  .offer-nav .wrap{ display:block; padding-inline:0; }
-  .offer-nav__lbl{ display:block; padding-inline:var(--pad-x); margin-bottom:11px; }
-  .offer-nav__row{ padding-inline:var(--pad-x); }
+.ochip:hover, .ochip:focus-visible{ background:var(--ink); color:var(--paper); }
+@media(max-width:767px){
+  /* Two rows of chips is already 96px of sticky chrome under a 75px nav, so the
+     label gives its line back to the chips. */
+  .offer-nav__lbl{ display:none; }
+  .ochip{ min-height:40px; padding:0 13px; font-size:11.5px; letter-spacing:.08em; }
 }
 
 /* ------------------------------------------------------- THE RHYTHM MARKERS
    The organising device. Each marker is the eyebrow above one or two service
    groups, never a replacement for the service name: a woman scanning for
    "keratin" has to find the word keratin, not reason about a stage of a cycle. */
+/* Full-bleed black bands. 100vw includes the scrollbar, so on desktop the pull
+   overshoots by half a scrollbar each side. body's overflow-x goes from the core
+   sheet's hidden to clip: it propagates to the viewport the same way, but clip
+   forbids the 8px programmatic scroll hidden still allows, and on html it would
+   break position:sticky, which is why it sits here. */
+body{ overflow-x:clip; }
 .rband{
-  max-width:60ch; margin:64px auto 0; text-align:center;
-  padding-top:30px; border-top:1px solid var(--hair);
+  margin:72px calc(50% - 50vw) 0; padding:44px var(--pad-x) 48px;
+  background:var(--ink-deep); color:#fff; text-align:center;
 }
-.mgroup + .rband{ margin-top:70px; }
+.mgroup + .rband, .blonde-band + .rband{ margin-top:76px; }
 .rband__eyebrow{
-  display:block; font-family:var(--fb); font-size:11.5px; font-weight:600;
-  letter-spacing:.26em; text-transform:uppercase; color:var(--accent-text);
-  margin-bottom:12px;
+  display:block; font-family:var(--fb); font-size:12px; font-weight:600;
+  letter-spacing:.28em; text-transform:uppercase; color:var(--accent);
+  margin-bottom:14px;
 }
 .rband__h{
-  margin:0; font-family:var(--fd); font-style:italic; font-weight:500;
-  font-size:clamp(24px,3.2vw,34px); line-height:1.16; color:var(--ink);
+  margin:0 auto; max-width:20ch; font-family:var(--fd); font-weight:700;
+  font-size:clamp(27px,4vw,40px); line-height:1.1; color:#fff; text-wrap:balance;
 }
 .rband__p{
-  margin:12px auto 0; max-width:56ch;
-  font-family:var(--fb); font-size:16px; font-weight:300; line-height:1.62;
-  color:var(--ink-soft);
+  margin:14px auto 0; max-width:56ch;
+  font-family:var(--fb); font-size:16px; font-weight:400; line-height:1.62;
+  color:rgba(255,255,255,.82);
 }
 
 /* --------------------------------------------------------------- THE GROUPS */
-.mgroup{ scroll-margin-top:94px; margin-top:40px; }
+.mgroup{ scroll-margin-top:var(--sticky-h,156px); margin-top:40px; }
 .mintro{ max-width:62ch; margin:0 auto; text-align:center; }
 .pillar{
   display:inline-block; margin-bottom:14px; padding:6px 14px;
@@ -319,7 +323,7 @@
   font-family:var(--fb); font-size:11px; font-weight:600; letter-spacing:.2em;
   text-transform:uppercase; color:var(--ink-soft);
 }
-.mgroup .menu-head{ margin:0; }
+.mgroup .menu-head{ margin:0; font-weight:700; font-size:clamp(24px,3.2vw,31px); }
 .mline{
   margin:12px auto 0; max-width:24ch;
   font-family:var(--fd); font-style:italic; font-weight:500;
@@ -424,7 +428,7 @@
   text-transform:uppercase; letter-spacing:.005em;
   font-size:clamp(28px,4.4vw,50px) !important; line-height:1.06;
 }
-.proof.grid-2{ gap:18px; }
+.proof{ gap:18px; }
 .proof .inc h3{ font-size:21px; }
 .proof .inc p{ margin:10px 0 0; font-family:var(--fb); font-size:15.5px; font-weight:300; line-height:1.6; color:var(--ink-soft); }
 
@@ -455,36 +459,31 @@
 }
 
 
-/* ------------------------------------------------------------ AT A GLANCE
-   Emma: "price visibility increased throughout." The group intros put feeling
-   before facts, which is right, but on a phone that left 1,400px of reading
-   between the top of the menu and the first number. Every price now sits within
-   one screen of the menu heading, and each row is the anchor to its own group.
-   It lives INSIDE #start, so the no-price-above-the-menu rule still holds. */
-.glance{
-  list-style:none; margin:34px auto 0; padding:0;
-  max-width:760px; border-top:1px solid var(--hair);
+/* --------------------------------------------------------- STICKY ANCHOR OFFSETS
+   Two rules, because two different amounts of chrome cover the target. Inside the
+   menu the offer nav is docked under the brand nav, so a chip has to clear both.
+   Below the menu the bar has scrolled away with its container and only the brand
+   nav is in the way. */
+#start{ scroll-margin-top:var(--sticky-h,156px); }
+.promise-band, .reserve, .faq{ scroll-margin-top:calc(var(--nav-h,75px) + 16px); }
+
+
+/* ------------------------------------------------------------ THE BLONDE BAND
+   Emma, 25 Aug: "this is good, it needs to go higher, at the top of the colour
+   part." It sits inside the menu, after the Tone Reset it sells and before the
+   colour marker, full-bleed cream so it reads as its own section. */
+.blonde-band{
+  margin:72px calc(50% - 50vw) 0; padding:64px var(--pad-x);
+  background:var(--cream);
 }
-.glance a{
-  display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between;
-  gap:6px 18px; min-height:56px; padding:14px 0;
-  border-bottom:1px solid var(--hair); text-decoration:none; color:var(--ink);
-  transition:color var(--dur) var(--ease);
+.blonde-band__inner{ max-width:var(--maxw); margin:0 auto; }
+.blonde-band .sec-head{ margin-bottom:34px; }
+@media(max-width:640px){
+  .rband{ margin-top:52px; padding:34px var(--pad-x) 38px; }
+  .mgroup + .rband, .blonde-band + .rband{ margin-top:56px; }
+  .blonde-band{ margin-top:52px; padding:44px var(--pad-x); }
 }
-.glance a:hover{ color:var(--accent-text); }
-.glance__n{
-  font-family:var(--fd); font-weight:500; font-size:clamp(17px,2vw,20px); line-height:1.24;
-}
-.glance__p{
-  font-family:var(--fb); font-size:12px; font-weight:600; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--ink-soft); white-space:nowrap;
-}
-.glance__p b{
-  font-family:var(--fd); font-weight:500; font-size:20px; letter-spacing:0;
-  text-transform:none; color:var(--ink); font-variant-numeric:tabular-nums;
-  margin-left:6px;
-}
-@media(max-width:520px){
-  .glance a{ display:grid; grid-template-columns:1fr; gap:5px; }
-  .glance__p{ white-space:normal; }
-}
+
+/* Two dark pillars sit adjacent above the menu; a hairline keeps them two
+   sections rather than one slab. */
+#wellness{ border-top:1px solid rgba(255,255,255,.14); }
