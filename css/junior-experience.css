@@ -290,19 +290,8 @@
   flex:0 0 auto; font-family:var(--fb); font-size:11.5px; font-weight:600;
   letter-spacing:.24em; text-transform:uppercase; color:var(--ink-soft);
 }
-/* Emma, 26 Aug via Kate: the label is now the fold. One slim line closed, the
-   full grid open. The chevron flips with it. */
-.offer-nav__toggle{
-  display:inline-flex; align-items:center; gap:8px; min-height:34px;
-  background:none; border:0; padding:0; cursor:pointer;
-}
-.ochev{
-  width:8px; height:8px; border-right:1.5px solid var(--ink-soft);
-  border-bottom:1.5px solid var(--ink-soft); transform:rotate(45deg) translateY(-2px);
-  transition:transform var(--dur) var(--ease);
-}
-.offer-nav.open .ochev{ transform:rotate(225deg) translateY(-1px); }
-.offer-nav:not(.open) .offer-nav__row{ display:none; }
+/* Emma, 26 Aug, second thoughts on the fold: the chips must be visible the moment
+   the bar appears, so the toggle is gone and the grid always shows. */
 .offer-nav__row{
   display:flex; flex-wrap:wrap; justify-content:center; gap:8px;
   list-style:none; margin:0; padding:0;
