@@ -345,6 +345,20 @@ body{ overflow-x:clip; }
 .mgroup .doors{ margin-top:30px; }
 .mgroup .menu-note{ margin-top:22px; }
 
+/* One photograph per service group, between the intro copy and the doors, so each
+   group shows the appointment before it prices it. Landscape band on desktop; a
+   phone gets a taller crop so the faces stay in frame. object-position is set
+   per image inline where the faces sit above centre. */
+.mphoto{ margin:32px auto 0; max-width:880px; }
+.mphoto img{
+  width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;
+  display:block; border-radius:var(--r-md); background:var(--stone-soft);
+}
+@media(max-width:559px){
+  .mphoto{ margin-top:26px; }
+  .mphoto img{ aspect-ratio:4/3; }
+}
+
 /* The Tone Reset carries the campaign's whole argument, so it gets the most space. */
 .mgroup--feature{
   background:var(--stone-soft); border:1px solid var(--hair); border-radius:var(--r-md);
