@@ -212,7 +212,7 @@
 .faq--light details:first-of-type{ border-top-color:var(--hair); }
 .faq--light summary{ color:var(--ink); }
 .faq--light .ans{ color:var(--ink-soft); }
-.faq--light .chev::before, .faq--light .chev::after{ background:var(--accent-deep); }
+.faq--light .chev::before, .faq--light .chev::after{ background:var(--ink); }
 /* Kate, 26 Aug: on a wide screen the answers ran a narrow 62ch column against a
    full-width question row. They now justify and run the full row, flush with the
    plus sign's edge. Phones keep the ragged right, where justify would leave rivers. */
