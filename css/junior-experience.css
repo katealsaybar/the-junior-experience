@@ -571,6 +571,12 @@ body{ overflow-x:clip; }
   .blonde-band{ margin-top:52px; padding:44px var(--pad-x); }
 }
 
-/* Two dark pillars sit adjacent above the menu; a hairline keeps them two
-   sections rather than one slab. */
-#wellness{ border-top:1px solid rgba(255,255,255,.14); }
+/* Kate, 26 Aug: two more dark moves against the vanilla. In-the-chair goes ink,
+   its white timeline cards carrying the contrast, and the press strip turns ink
+   and sits below the awards, so the back half of the page alternates properly. */
+#hour .hour-rail figcaption{ color:rgba(255,255,255,.72); }
+#hour .timeline{ background:rgba(255,255,255,.16); }
+.press-strip--dark{ background:var(--ink-deep); border-bottom:0; }
+.press-strip--dark .press-eyebrow{ color:var(--accent); }
+.press-strip--dark .press-row a{ color:rgba(255,255,255,.85); text-decoration-color:rgba(255,255,255,.4); }
+.press-strip--dark .press-row a:hover{ color:#fff; text-decoration-color:#fff; }
