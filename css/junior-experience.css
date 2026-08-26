@@ -206,6 +206,13 @@
 .tcard cite{ font-size:16px; }
 .tstep b{ font-size:17px; }
 .faq .ans{ font-size:18px; }
+/* Kate, 26 Aug: the FAQ was a second dark band running straight into the dark
+   footer. It steps into the light so the footer is the only dark at the bottom. */
+.faq--light details{ border-bottom-color:var(--hair); }
+.faq--light details:first-of-type{ border-top-color:var(--hair); }
+.faq--light summary{ color:var(--ink); }
+.faq--light .ans{ color:var(--ink-soft); }
+.faq--light .chev::before, .faq--light .chev::after{ background:var(--accent-deep); }
 /* Kate, 26 Aug: on a wide screen the answers ran a narrow 62ch column against a
    full-width question row. They now justify and run the full row, flush with the
    plus sign's edge. Phones keep the ragged right, where justify would leave rivers. */
