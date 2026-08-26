@@ -131,8 +131,8 @@
 <div class="menu-zone">
 <nav class="offer-nav" id="menu-nav" aria-label="The menu">
   <div class="wrap">
-    <span class="offer-nav__lbl">Pick your services</span>
-    <ul class="offer-nav__row">
+    <button type="button" class="offer-nav__lbl offer-nav__toggle" aria-expanded="false" aria-controls="offer-chips">Pick your services<span class="ochev" aria-hidden="true"></span></button>
+    <ul class="offer-nav__row" id="offer-chips">
       <li><a class="ochip" href="#blowdries">Blow-dries</a></li>
       <li><a class="ochip" href="#treatments">Treatments</a></li>
       <li><a class="ochip" href="#courses">Courses</a></li>
@@ -614,6 +614,8 @@
 
 
 <script src="js/nav-scroll.js" defer></script>
+
+<script src="js/offer-toggle.js" defer></script>
 
 <script src="js/form-prefill.js" defer></script>
 
