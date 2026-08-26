@@ -396,6 +396,15 @@ body{ overflow-x:clip; }
 @media(max-width:559px){
   .mphoto .ph-slot{ aspect-ratio:4/3; }
 }
+/* Kate, 26 Aug: a full photo-shaped empty box read as clutter on a phone. Below
+   560px every placeholder collapses to a slim note band; the label flows in the
+   box again so the content sets the height. Desktop keeps the true photo shape. */
+@media(max-width:559px){
+  .ph-slot, .mphoto .ph-slot{ aspect-ratio:auto; }
+  .ph-slot span{ position:static; display:block; padding:18px 16px; letter-spacing:.1em; line-height:1.6; }
+  .ph-slot span b{ display:inline; margin-left:6px; font-size:13px; letter-spacing:.1em; }
+}
+
 
 /* The Tone Reset carries the campaign's whole argument, so it gets the most space. */
 .mgroup--feature{
