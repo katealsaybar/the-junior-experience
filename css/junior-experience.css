@@ -164,6 +164,24 @@
   width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; display:block;
   border-radius:var(--r-md); background:var(--stone-soft);
 }
+/* Kate, 26 Aug: the middle consult photo showed April, who is a stylist now, not a
+   junior. A dimensioned placeholder holds the slot until the right junior shot exists.
+   It sizes exactly like the images beside it, so the rail's rhythm does not change. */
+.ph-slot{
+  width:100%; height:auto; aspect-ratio:3/4; position:relative; text-align:center;
+  border:1.5px dashed var(--hair); border-radius:var(--r-md); background:var(--stone-soft);
+}
+/* The label is absolute so its lines can never stretch the box past the
+   aspect ratio the real photographs beside it follow. */
+.ph-slot span{
+  position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center;
+  font-family:var(--fb); font-size:13px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-soft); line-height:1.7; padding:0 18px;
+}
+.ph-slot span b{ display:block; font-size:17px; letter-spacing:.08em; }
+@media(max-width:559px){
+  .ph-slot{ aspect-ratio:4/5; }
+}
 .hour-rail figcaption{
   margin-top:11px; text-align:center;
   font-size:12.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
@@ -187,7 +205,21 @@
 .tcard blockquote{ font-size:16.5px; }
 .tcard cite{ font-size:16px; }
 .tstep b{ font-size:17px; }
-.faq .ans{ font-size:17px; }
+.faq .ans{ font-size:18px; }
+/* Kate, 26 Aug: on a wide screen the answers ran a narrow 62ch column against a
+   full-width question row. They now justify and run the full row, flush with the
+   plus sign's edge. Phones keep the ragged right, where justify would leave rivers. */
+@media(min-width:700px){
+  .faq .ans{ max-width:none; text-align:justify; }
+}
+/* Kate, 26 Aug: the four review cards ran ragged on desktop because the quotes
+   differ in length. Both rows share one height and the attribution pins to the
+   card's bottom edge. Phones stack the cards, so nothing changes there. */
+@media(min-width:560px){
+  #reviews .grid-2{ grid-auto-rows:1fr; }
+  #reviews .tcard{ display:flex; flex-direction:column; }
+  #reviews .tcard cite{ margin-top:auto; padding-top:18px; }
+}
 
 /* --------------------------------------------------------------- LABEL SIZE
    25 Aug: every small-caps label was set at 10 to 12px, which reads as fine print
@@ -357,6 +389,12 @@ body{ overflow-x:clip; }
 @media(max-width:559px){
   .mphoto{ margin-top:26px; }
   .mphoto img{ aspect-ratio:4/3; }
+}
+/* A service-photo slot waiting on its photograph runs the same band shape the
+   real image will take, so the group's rhythm is already right. */
+.mphoto .ph-slot{ aspect-ratio:16/9; }
+@media(max-width:559px){
+  .mphoto .ph-slot{ aspect-ratio:4/3; }
 }
 
 /* The Tone Reset carries the campaign's whole argument, so it gets the most space. */
